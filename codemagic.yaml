@@ -10,21 +10,22 @@ workflows:
         - google_play_credentials
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
-        DOTNET_BIN: $CM_BUILD_DIR/dotnet
-        PACKAGE_NAME: "io.codemagic.mauinet8"
+        DOTNET_BIN: $CM_BUILD_DIR/dotnet/dotnet
+        PACKAGE_NAME: "io.codemagic.mauinet6"
     scripts:
       - name: Install dotnet sdk
         script: | 
-          wget https://dot.net/v1/dotnet-install.sh
-          chmod +x dotnet-install.sh
-          ./dotnet-install.sh --install-dir $DOTNET_PATH
+          # wget https://dot.net/v1/dotnet-install.sh
+          # chmod +x dotnet-install.sh
+          # ./dotnet-install.sh --install-dir $DOTNET_PATH
+          wget https://download.visualstudio.microsoft.com/download/pr/08aa808d-1c60-430e-a08e-70c2e5f219e1/9c17e6e2105d6c25a8802b88be47cf14/dotnet-sdk-8.0.100-osx-arm64.pkg
+          mkdir -p DOTNET_PATH && tar zxf dotnet-sdk-8.0.100-osx-arm64.pkg -C DOTNET_PATH
+          export DOTNET_ROOT=DOTNET_PATH
+          export PATH=$PATH:DOTNET_PATH
       - name: Install MAUI
         script: | 
-          $DOTNET_BIN nuget locals all --clear 
-          $DOTNET_BIN workload install maccatalyst
-          $DOTNET_BIN workload install maui \
-            --source https://aka.ms/dotnet8/nuget/index.json \
-            --source https://api.nuget.org/v3/index.json
+
+          $DOTNET_BIN workload install maui
 
       - name: Build
         script: |
@@ -36,7 +37,7 @@ workflows:
           fi
           $DOTNET_BIN workload list
           $DOTNET_BIN workload update
-          $DOTNET_BIN publish -f net8.0-android \
+          $DOTNET_BIN publish -f net6.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
