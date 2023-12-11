@@ -24,9 +24,11 @@ workflows:
           # export PATH=$PATH:$HOME/dotnet
       - name: Install MAUI
         script: | 
-          $DOTNET_BIN workload install maui \
-            --source https://aka.ms/dotnet8/nuget/index.json \
-            --source https://api.nuget.org/v3/index.json
+          $DOTNET_BIN workload install maui
+          
+          # $DOTNET_BIN workload install maui \
+          #   --source https://aka.ms/dotnet8/nuget/index.json \
+          #   --source https://api.nuget.org/v3/index.json
 
       - name: Build
         script: |
