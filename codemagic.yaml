@@ -37,7 +37,7 @@ workflows:
           # fi
           $DOTNET_BIN workload list
           $DOTNET_BIN workload update
-          $DOTNET_BIN publish -f net6.0-android \
+          $DOTNET_BIN publish -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
