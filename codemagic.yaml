@@ -10,7 +10,7 @@ workflows:
         - google_play_credentials
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
-        DOTNET_BIN: $CM_BUILD_DIR/dotnet/dotnet
+        DOTNET_BIN: $CM_BUILD_DIR/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
       - name: Install dotnet sdk
@@ -21,20 +21,19 @@ workflows:
       - name: Install MAUI
         script: | 
           $DOTNET_BIN nuget locals all --clear 
-          $DOTNET_BIN workload install ios
           $DOTNET_BIN workload install maccatalyst
-          $DOTNET_BIN workload install android maui \
+          $DOTNET_BIN workload install maui \
             --source https://aka.ms/dotnet8/nuget/index.json \
             --source https://api.nuget.org/v3/index.json
 
       - name: Build
         script: |
-          # LATEST_BUILD_NUMBER=1
-          # if [ -z $LATEST_BUILD_NUMBER ]; then
-          #     UPDATED_BUILD_NUMBER=$BUILD_NUMBER
-          # else
-          #     UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
-          # fi
+          LATEST_BUILD_NUMBER=1
+          if [ -z $LATEST_BUILD_NUMBER ]; then
+              UPDATED_BUILD_NUMBER=$BUILD_NUMBER
+          else
+              UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+          fi
           $DOTNET_BIN workload list
           $DOTNET_BIN workload update
           $DOTNET_BIN publish -f net8.0-android \
