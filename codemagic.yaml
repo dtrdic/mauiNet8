@@ -32,6 +32,11 @@ workflows:
           #   --source https://aka.ms/dotnet8/nuget/index.json \
           #   --source https://api.nuget.org/v3/index.json
 
+      - name: Dotnet Build
+        script: |
+          $DOTNET_BIN build -f net8.0-android \
+            -p:AndroidSdkDirectory=$DOTNET_PATH\sdk \
+
       - name: Build
         script: |
           LATEST_BUILD_NUMBER=1
@@ -44,7 +49,6 @@ workflows:
           $DOTNET_BIN workload update
           $DOTNET_BIN publish -f net8.0-android \
             -c Release \
-            -p:AndroidSdkDirectory=$DOTNET_PATH\sdk \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
             -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
