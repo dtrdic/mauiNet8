@@ -44,6 +44,7 @@ workflows:
           $DOTNET_BIN workload update
           $DOTNET_BIN publish -f net8.0-android \
             -c Release \
+            -p:AndroidSdkDirectory=%LocalAppData%\Android\Sdk \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
             -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
