@@ -3,8 +3,8 @@ workflows:
     name: MAUI NET8 ios
     max_build_duration: 120
     instance_type: mac_mini_m1
-    integrations:
-      app_store_connect: DavidAPIkey
+    # integrations:
+    #   app_store_connect: DavidAPIkey
     environment:
       ios_signing:
         distribution_type: app_store
@@ -43,13 +43,10 @@ workflows:
         script: |
           $DOTNET publish -f net8.0-ios \
             -c Release \
-            -p:AndroidKeyStore=True \
-            -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
-            -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
-            -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
-            -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
-            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
-            -p:ApplicationDisplayVersion="1.2" \
+            -p:BuildIpa=True \
+            -p:ApplicationDisplayVersion="1.0.0" \
+            -p:ApplicationVersion=1 \
+            -p:RuntimeIdentifier=ios-arm64 \
             -o ../artifacts
 
           # LATEST_BUILD_NUMBER=1
@@ -72,6 +69,6 @@ workflows:
           #   -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
-    publishing:
-      app_store_connect:
-        auth: integration
+    # publishing:
+    #   app_store_connect:
+    #     auth: integration
