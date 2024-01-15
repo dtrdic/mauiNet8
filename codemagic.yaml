@@ -3,8 +3,8 @@ workflows:
     name: MAUI NET8 ios
     max_build_duration: 120
     instance_type: mac_mini_m1
-    # integrations:
-    #   app_store_connect: DavidAPIkey
+    integrations:
+      app_store_connect: DavidAPIkey
     environment:
       ios_signing:
         distribution_type: app_store
@@ -41,12 +41,17 @@ workflows:
 
       - name: Build
         script: |
+          CERT_NAME=$(keychain list-certificates | jq -r '.[] | .common_name')
+          PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
+          
           $DOTNET publish -f net8.0-ios \
             -c Release \
             -p:BuildIpa=True \
             -p:ApplicationDisplayVersion="1.0.0" \
             -p:ApplicationVersion=1 \
             -p:RuntimeIdentifier=ios-arm64 \
+            -p:CodesignKey="$CERT_NAME" \
+            -p:CodesignProvision="$PROFILE_NAME" \
             -o ../artifacts
 
           # LATEST_BUILD_NUMBER=1
@@ -69,6 +74,6 @@ workflows:
           #   -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
-    # publishing:
-    #   app_store_connect:
-    #     auth: integration
+    publishing:
+      app_store_connect:
+        auth: integration
