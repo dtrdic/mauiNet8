@@ -24,7 +24,7 @@
 		<ApplicationTitle>MauiNet8</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.mauinet8</ApplicationId>
+		<ApplicationId>io.codemagic.mauinet8</ApplicationId>
 
 		<!-- Versions -->
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
