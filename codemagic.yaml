@@ -3,12 +3,12 @@ workflows:
     name: MAUI NET8 ios
     max_build_duration: 120
     instance_type: mac_mini_m1
+    integrations:
+      app_store_connect: DavidAPIkey
     environment:
       ios_signing:
         distribution_type: app_store
         bundle_identifier: io.codemagic.mauinet8
-      groups:
-        - google_play_credentials
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
