@@ -24,41 +24,51 @@ workflows:
           # export PATH=$PATH:$HOME/dotnet
       - name: Install MAUI
         script: | 
-          $DOTNET_BIN nuget locals all --clear 
-          $DOTNET_BIN workload install maccatalyst
-          $DOTNET_BIN workload install maui
+          $DOTNET nuget locals all --clear 
+          $DOTNET workload install android maui \
+            --source https://aka.ms/dotnet6/nuget/index.json \
+            --source https://api.nuget.org/v3/index.json
 
           # $DOTNET_BIN workload install maui \
           #   --source https://aka.ms/dotnet8/nuget/index.json \
           #   --source https://api.nuget.org/v3/index.json
 
-      - name: Dotnet Build
-        script: |
-          $DOTNET_BIN build -f net8.0-android \
-            -p:AndroidSdkDirectory=$DOTNET_PATH\sdk \
+      # - name: Dotnet Build
+      #   script: |
+      #     $DOTNET_BIN build -f net8.0-android \
+      #       -p:AndroidSdkDirectory=$DOTNET_PATH\sdk \
 
       - name: Build
         script: |
-          LATEST_BUILD_NUMBER=1
-          if [ -z $LATEST_BUILD_NUMBER ]; then
-              UPDATED_BUILD_NUMBER=$BUILD_NUMBER
-          else
-              UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
-          fi
-          $DOTNET_BIN workload list
-          $DOTNET_BIN workload update
-          $DOTNET_BIN publish -f net8.0-android \
+          $DOTNET publish -f net8.0-ios \
             -c Release \
-            -p:AndroidKeyStore=True \
-            -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
-            -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
-            -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
-            -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
-            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
-            -p:ApplicationDisplayVersion="1.2" \
+            -p:BuildIpa=True \
+            -p:ApplicationDisplayVersion="1.0.0" \
+            -p:ApplicationVersion=1 \
+            -p:RuntimeIdentifier=ios-arm64 \
             -o ../artifacts
+
+          # LATEST_BUILD_NUMBER=1
+          # if [ -z $LATEST_BUILD_NUMBER ]; then
+          #     UPDATED_BUILD_NUMBER=$BUILD_NUMBER
+          # else
+          #     UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+          # fi
+          # $DOTNET_BIN workload list
+          # $DOTNET_BIN workload update
+          # $DOTNET_BIN publish -f net8.0-android \
+          #   -c Release \
+          #   -p:AndroidKeyStore=True \
+          #   -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
+          #   -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
+          #   -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
+          #   -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
+          #   -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+          #   -p:ApplicationDisplayVersion="1.2" \
+          #   -o ../artifacts
     artifacts:
         - build/**/outputs/**/*.aab
+        - ./artifacts/*.ipa
     publishing:
       google_play:
         credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
