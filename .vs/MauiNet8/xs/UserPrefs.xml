@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{78F726B9-2F97-4404-99DE-3FBF3DE29685}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.MauiNet8 PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/17.0.8478/tools/msbuild/iOS/Xamarin.Shared.targets">
+    <Files>
+      <File FileName="Platforms/Android/Resources/values/colors.xml" Line="1" Column="1" />
+      <File FileName="../../../../../../../../usr/local/share/dotnet/packs/Microsoft.Android.Sdk.Darwin/34.0.43/tools/Xamarin.Android.Aapt2.targets" Line="214" Column="3" />
+      <File FileName="../../../../../../../../usr/local/share/dotnet/packs/Microsoft.iOS.Sdk/17.0.8478/tools/msbuild/iOS/Xamarin.Shared.targets" Line="885" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="MauiNet8" expanded="True" selected="True">
+            <Node name="MauiNet8">
+              <Node name="Platforms" expanded="True">
+                <Node name="Android" expanded="True">
+                  <Node name="Resources" expanded="True">
+                    <Node name="values" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
