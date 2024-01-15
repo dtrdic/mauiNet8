@@ -1,0 +1,79 @@
+workflows:
+  maui-ios:
+    name: MAUI NET8 ios
+    max_build_duration: 120
+    instance_type: mac_mini_m1
+    integrations:
+      app_store_connect: DavidAPIkey
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: io.codemagic.mauinet8
+      vars:
+        DOTNET_PATH: $CM_BUILD_DIR/dotnet
+        DOTNET: $CM_BUILD_DIR/dotnet/dotnet
+        PACKAGE_NAME: "io.codemagic.mauinet8"
+    scripts:
+      - name: Install dotnet sdk
+        script: | 
+          wget https://dot.net/v1/dotnet-install.sh
+          chmod +x dotnet-install.sh
+          ./dotnet-install.sh --install-dir $DOTNET_PATH
+          # wget https://download.visualstudio.microsoft.com/download/pr/08aa808d-1c60-430e-a08e-70c2e5f219e1/9c17e6e2105d6c25a8802b88be47cf14/dotnet-sdk-8.0.100-osx-arm64.pkg
+          # mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-8.0.100-osx-arm64.pkg -C $HOME/dotnet
+          # export DOTNET_ROOT=$HOME/dotnet
+          # export PATH=$PATH:$HOME/dotnet
+      - name: Install MAUI
+        script: | 
+          $DOTNET nuget locals all --clear 
+          $DOTNET workload install android maui \
+            --source https://aka.ms/dotnet6/nuget/index.json \
+            --source https://api.nuget.org/v3/index.json
+
+          # $DOTNET_BIN workload install maui \
+          #   --source https://aka.ms/dotnet8/nuget/index.json \
+          #   --source https://api.nuget.org/v3/index.json
+
+      # - name: Dotnet Build
+      #   script: |
+      #     $DOTNET_BIN build -f net8.0-android \
+      #       -p:AndroidSdkDirectory=$DOTNET_PATH\sdk \
+
+      - name: Build
+        script: |
+          CERT_NAME=$(keychain list-certificates | jq -r '.[] | .common_name')
+          PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
+          
+          $DOTNET publish -f net8.0-ios \
+            -c Release \
+            -p:BuildIpa=True \
+            -p:ApplicationDisplayVersion="1.0.0" \
+            -p:ApplicationVersion=1 \
+            -p:RuntimeIdentifier=ios-arm64 \
+            -p:CodesignKey="$CERT_NAME" \
+            -p:CodesignProvision="$PROFILE_NAME" \
+            -o ../artifacts
+
+          # LATEST_BUILD_NUMBER=1
+          # if [ -z $LATEST_BUILD_NUMBER ]; then
+          #     UPDATED_BUILD_NUMBER=$BUILD_NUMBER
+          # else
+          #     UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+          # fi
+          # $DOTNET_BIN workload list
+          # $DOTNET_BIN workload update
+          # $DOTNET_BIN publish -f net8.0-android \
+          #   -c Release \
+          #   -p:AndroidKeyStore=True \
+          #   -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
+          #   -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
+          #   -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
+          #   -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
+          #   -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+          #   -p:ApplicationDisplayVersion="1.2" \
+          #   -o ../artifacts
+    artifacts:
+        - ./artifacts/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
