@@ -43,10 +43,13 @@ workflows:
         script: |
           $DOTNET publish -f net8.0-ios \
             -c Release \
-            -p:BuildIpa=True \
-            -p:ApplicationDisplayVersion="1.0.0" \
-            -p:ApplicationVersion=1 \
-            -p:RuntimeIdentifier=ios-arm64 \
+            -p:AndroidKeyStore=True \
+            -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
+            -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
+            -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
+            -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
+            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+            -p:ApplicationDisplayVersion="1.2" \
             -o ../artifacts
 
           # LATEST_BUILD_NUMBER=1
