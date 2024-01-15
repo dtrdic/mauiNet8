@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MauiNet8")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+3ad5fe9156b87ba98ec36db8c6b108678a0f9936")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a2a4678d39b103af4acb5559b3d5339046fac6a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MauiNet8")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MauiNet8")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
