@@ -14,6 +14,9 @@ workflows:
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
+      - name: sdkmanager --update
+        script: |   
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --update
       - name: Install dotnet sdk
         script: | 
           wget https://dot.net/v1/dotnet-install.sh
