@@ -16,7 +16,7 @@ workflows:
     scripts:
       - name: sdkmanager --update
         script: |   
-          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --update "platforms;android-34"
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --install "platforms;android-34"
       - name: Install dotnet sdk
         script: | 
           wget https://dot.net/v1/dotnet-install.sh
