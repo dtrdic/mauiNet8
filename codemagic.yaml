@@ -23,8 +23,8 @@ workflows:
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui \
-              --source https://aka.ms/dotnet8/nuget/index.json \
-              --source https://api.nuget.org/v3/index.json      
+              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet9/nuget/v3/index.json \
+              --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
@@ -45,7 +45,7 @@ workflows:
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             
             cd MauiNet8/MauiNet8/MauiNet8
-            $DOTNET publish -f net8.0-ios \
+            $DOTNET publish -f net9.0-ios \
               -c Release \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.0.0" \
