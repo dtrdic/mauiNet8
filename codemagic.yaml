@@ -73,7 +73,7 @@ workflows:
         android_signing:
           - testKeystore
         groups:
-          - google_credentials3
+          - google_play_credentials2
         vars:
           DOTNET_PATH: $CM_BUILD_DIR/dotnet
           DOTNET: $CM_BUILD_DIR/dotnet/dotnet
