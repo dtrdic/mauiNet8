@@ -65,55 +65,55 @@ workflows:
       app_store_connect:
         auth: integration
 
-maui-android:
-    name: Dotnet MAUI Android
-    max_build_duration: 120
-    instance_type: mac_mini_m2
-    environment:
-      android_signing:
-        - test_keystore
-      groups:
-        - google_credentials3
-      vars:
-        DOTNET_PATH: $CM_BUILD_DIR/dotnet
-        DOTNET: $CM_BUILD_DIR/dotnet/dotnet
-        PACKAGE_NAME: "io.codemagic.mauinet8"
-    scripts:
-      - name: Install dotnet sdk
-        script: | 
-          wget https://dot.net/v1/dotnet-install.sh
-          chmod +x dotnet-install.sh
-          ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
-      - name: Install MAUI
-        script: | 
-            $DOTNET nuget locals all --clear 
-            $DOTNET workload install android maui \
-              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-              --source https://api.nuget.org/v3/index.json   
-      - name: Build
-        script: | 
-          LATEST_BUILD_NUMBER=$(google-play get-latest-build-number --package-name "$PACKAGE_NAME")
-          if [ -z $LATEST_BUILD_NUMBER ]; then
-            UPDATED_BUILD_NUMBER=$BUILD_NUMBER
-          else
-            UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
-          fi
-          
-          cd MauiNet8/MauiNet8/MauiNet8
-          $DOTNET publish -f net8.0-android \
-            -c Release \
-            -p:AndroidKeyStore=True \
-            -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
-            -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
-            -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
-            -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
-            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
-            -p:ApplicationDisplayVersion="1.0.0" \
-            -o ../artifacts
-    artifacts:
-        - /Users/builder/clone/artifacts/*Signed.aab
-    publishing:
-      google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
-        track: internal
-        submit_as_draft: true
+  maui-android:
+      name: Dotnet MAUI Android
+      max_build_duration: 120
+      instance_type: mac_mini_m2
+      environment:
+        android_signing:
+          - test_keystore
+        groups:
+          - google_credentials3
+        vars:
+          DOTNET_PATH: $CM_BUILD_DIR/dotnet
+          DOTNET: $CM_BUILD_DIR/dotnet/dotnet
+          PACKAGE_NAME: "io.codemagic.mauinet8"
+      scripts:
+        - name: Install dotnet sdk
+          script: | 
+            wget https://dot.net/v1/dotnet-install.sh
+            chmod +x dotnet-install.sh
+            ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+        - name: Install MAUI
+          script: | 
+              $DOTNET nuget locals all --clear 
+              $DOTNET workload install android maui \
+                --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+                --source https://api.nuget.org/v3/index.json   
+        - name: Build
+          script: | 
+            LATEST_BUILD_NUMBER=$(google-play get-latest-build-number --package-name "$PACKAGE_NAME")
+            if [ -z $LATEST_BUILD_NUMBER ]; then
+              UPDATED_BUILD_NUMBER=$BUILD_NUMBER
+            else
+              UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+            fi
+            
+            cd MauiNet8/MauiNet8/MauiNet8
+            $DOTNET publish -f net8.0-android \
+              -c Release \
+              -p:AndroidKeyStore=True \
+              -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
+              -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
+              -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
+              -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
+              -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+              -p:ApplicationDisplayVersion="1.0.0" \
+              -o ../artifacts
+      artifacts:
+          - /Users/builder/clone/artifacts/*Signed.aab
+      publishing:
+        google_play:
+          credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS
+          track: internal
+          submit_as_draft: true
