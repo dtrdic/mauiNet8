@@ -79,6 +79,9 @@ workflows:
           DOTNET: $CM_BUILD_DIR/dotnet/dotnet
           PACKAGE_NAME: "io.codemagic.mauinet8"
       scripts:
+        - name: printenv
+          script: | 
+            printenv
         - name: Install dotnet sdk
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
@@ -92,7 +95,7 @@ workflows:
                 --source https://api.nuget.org/v3/index.json   
         - name: dotnet build -t:InstallAndroidDependencies
           script: | 
-            dotnet build -t:InstallAndroidDependencies -f net8.0-android "-p:AndroidSdkDirectory=/usr/local/share/android-sdk"
+            $DOTNET build -t:InstallAndroidDependencies -f net8.0-android "-p:AndroidSdkDirectory=/usr/local/share/android-sdk"
 
         - name: Build
           script: | 
