@@ -93,9 +93,6 @@ workflows:
             --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
             --source https://api.nuget.org/v3/index.json   
 
-          # Install cmdline-tools to replace deprecated "tools"
-          yes | sdkmanager "cmdline-tools;latest" "platforms;android-34"
-
       - name: Install Android Dependencies
         script: | 
           $DOTNET build -t:InstallAndroidDependencies -f net8.0-android "-p:AndroidSdkDirectory=/usr/local/share/android-sdk"
