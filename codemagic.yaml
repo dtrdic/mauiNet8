@@ -90,6 +90,10 @@ workflows:
               $DOTNET workload install android maui \
                 --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
                 --source https://api.nuget.org/v3/index.json   
+        - name: dotnet build -t:InstallAndroidDependencies
+          script: | 
+            dotnet build -t:InstallAndroidDependencies -f net8.0-android "-p:AndroidSdkDirectory=/usr/local/share/android-sdk"
+
         - name: Build
           script: | 
             LATEST_BUILD_NUMBER=$(google-play get-latest-build-number --package-name "$PACKAGE_NAME")
@@ -98,8 +102,9 @@ workflows:
             else
               UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
             fi
+          
             
-            cd MauiNet8/MauiNet8/MauiNet8
+            cd MauiNet8/MauiNet8
             $DOTNET publish -f net8.0-android \
               -c Release \
               -p:AndroidKeyStore=True \
