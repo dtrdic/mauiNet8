@@ -71,7 +71,7 @@ workflows:
       instance_type: mac_mini_m2
       environment:
         android_signing:
-          - testKeystore
+          - davidKeystore
         groups:
           - google_play_credentials2
         vars:
