@@ -94,7 +94,9 @@ workflows:
 
       - name: Install Android Dependencies
         script: | 
-          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android "-p:AndroidSdkDirectory=/usr/local/share/android-sdk"
+          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
+            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
+            "-p:AcceptAndroidSDKLicenses=true"
 
       - name: Build
         script: | 
