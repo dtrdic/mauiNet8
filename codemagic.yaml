@@ -78,7 +78,6 @@ workflows:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
-        AcceptAndroidSDKLicenses: "android-sdk-license-c81a61d9"
     scripts:
       - name: Install dotnet sdk
         script: | 
