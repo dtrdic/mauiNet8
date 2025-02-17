@@ -66,10 +66,11 @@ workflows:
         auth: integration
 
   maui-android:
-    name: Dotnet MAUI Android
+    name: Android
     max_build_duration: 120
     instance_type: mac_mini_m2
     environment:
+      flutter: 3.27.4
       android_signing:
         - davidKeystore
       groups:
@@ -107,7 +108,7 @@ workflows:
             UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
           fi
 
-          cd MauiNet8
+          cd
           $DOTNET publish -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
