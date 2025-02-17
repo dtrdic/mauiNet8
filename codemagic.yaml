@@ -69,6 +69,7 @@ workflows:
     name: Android
     max_build_duration: 120
     instance_type: mac_mini_m2
+    working_directory: MauiNet8/MauiNet8
     environment:
       flutter: 3.27.4
       android_signing:
@@ -108,7 +109,7 @@ workflows:
             UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
           fi
 
-          cd
+          # cd MauiNet8/MauiNet8/MauiNet8
           $DOTNET publish -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
