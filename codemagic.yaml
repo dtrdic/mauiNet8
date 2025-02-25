@@ -107,7 +107,7 @@ workflows:
             UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
           fi
 
-          $DOTNET publish -f net8.0-android \
+          $DOTNET publish MauiNet8/MauiNet8.csproj -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
