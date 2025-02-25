@@ -1,30 +1,34 @@
 workflows:
   maui-ios:
-    name: MAUI NET8 ios
+    name: MAUI NET9 ios
     max_build_duration: 120
     instance_type: mac_mini_m1
+    triggering:
+      events:
+        - push
     integrations:
       app_store_connect: DavidAPIkey
     environment:
+      xcode: 16.2
       ios_signing:
         distribution_type: app_store
         bundle_identifier: io.codemagic.mauinet8
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
-        DOTNET: $CM_BUILD_DIR/dotnet/dotnet
+        DOTNET:  $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
         - name: Install dotnet sdk
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --install-dir $DOTNET_PATH
+            ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui \
-              --source https://aka.ms/dotnet8/nuget/index.json \
-              --source https://api.nuget.org/v3/index.json      
+              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+              --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
@@ -53,9 +57,71 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
+              -p:SupportedOSPlatformVersion=12.3 \
               -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
     publishing:
       app_store_connect:
         auth: integration
+
+  maui-android:
+    name: Android
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+    environment:
+      flutter: 3.27.4
+      android_signing:
+        - davidKeystore
+      groups:
+        - google_credentials3
+      vars:
+        DOTNET_PATH: $CM_BUILD_DIR/dotnet
+        DOTNET: $CM_BUILD_DIR/dotnet/dotnet
+        PACKAGE_NAME: "io.codemagic.mauinet8"
+    scripts:
+      - name: Install dotnet sdk
+        script: | 
+          wget https://dot.net/v1/dotnet-install.sh
+          chmod +x dotnet-install.sh
+          ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+
+      - name: Install MAUI and Android SDK Dependencies
+        script: |
+          $DOTNET nuget locals all --clear 
+          $DOTNET workload install android maui \
+            --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+            --source https://api.nuget.org/v3/index.json   
+
+      - name: Install Android Dependencies
+        script: | 
+          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
+            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
+            "-p:AcceptAndroidSDKLicenses=true"
+
+      - name: Build
+        script: | 
+          LATEST_BUILD_NUMBER=$(google-play get-latest-build-number --package-name "$PACKAGE_NAME")
+          if [ -z $LATEST_BUILD_NUMBER ]; then
+            UPDATED_BUILD_NUMBER=$BUILD_NUMBER
+          else
+            UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+          fi
+
+          $DOTNET publish -f net8.0-android \
+            -c Release \
+            -p:AndroidKeyStore=True \
+            -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
+            -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
+            -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
+            -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
+            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+            -p:ApplicationDisplayVersion="1.0.0" \
+            -o ../artifacts
+    artifacts:
+      - /Users/builder/clone/artifacts/*Signed.aab
+    publishing:
+      google_play:
+        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS3
+        track: internal
+        submit_as_draft: true
