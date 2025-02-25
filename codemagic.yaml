@@ -48,7 +48,7 @@ workflows:
             CERT_NAME=$(keychain list-certificates | jq -r '.[] | .common_name')
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             
-            $DOTNET publish -f net8.0-ios \
+            $DOTNET publish MauiNet8.csproj -f net8.0-ios \
               -c Release \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.0.0" \
@@ -57,7 +57,6 @@ workflows:
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
               -p:SupportedOSPlatformVersion=12.3  \
-              -p:AndroidUseIntermediateDesignerFile=false \
               -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
