@@ -56,7 +56,8 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
-              -p:SupportedOSPlatformVersion=12.3 \
+              -p:SupportedOSPlatformVersion=12.3  \
+              -p:AndroidUseIntermediateDesignerFile=false \
               -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
