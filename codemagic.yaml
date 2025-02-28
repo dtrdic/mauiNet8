@@ -1,6 +1,6 @@
 workflows:
   maui-ios:
-    name: MAUI NET9 ios
+    name: MAUI ios
     max_build_duration: 120
     instance_type: mac_mini_m1
     triggering:
@@ -65,7 +65,7 @@ workflows:
         auth: integration
 
   maui-android:
-    name: Android
+    name: Maui Android
     max_build_duration: 120
     instance_type: mac_mini_m2
     environment:
