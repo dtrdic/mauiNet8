@@ -35,11 +35,7 @@ workflows:
 
             PLIST=$CM_BUILD_DIR/src/WeatherTwentyOne/Platforms/iOS/Info.plist
             PLIST_BUDDY=/usr/libexec/PlistBuddy
-            $PLIST_BUDDY -c "Add :ITSAppUsesNonExemptEncryption bool false" $PLIST
-        - name: CLKEAN
-          script: | 
-            $DOTNET clean MauiNet8.csproj
-            $DOTNET restore MauiNet8.csproj -r ios-arm64      
+            $PLIST_BUDDY -c "Add :ITSAppUsesNonExemptEncryption bool false" $PLIST 
 
         - name: Set build version and build the app
           script: | 
