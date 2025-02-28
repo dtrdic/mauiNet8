@@ -53,7 +53,7 @@ workflows:
             CERT_NAME=$(keychain list-certificates | jq -r '.[] | .common_name')
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             
-            cd "$(dirname "$(find . -name 'TrasolumssApp.csproj' | head -n 1)")"
+            cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
 
             $DOTNET publish -f net8.0-ios \
               -c Release \
