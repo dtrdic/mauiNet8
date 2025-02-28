@@ -18,6 +18,11 @@ workflows:
         DOTNET:  $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
+
+        - name: dotnet workload uninstall android
+          script: | 
+              $DOTNET workload uninstall android
+
         - name: Install dotnet sdk
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
