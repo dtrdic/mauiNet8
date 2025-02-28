@@ -55,7 +55,7 @@ workflows:
             
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
 
-            $DOTNET publish -f net8.0-ios \
+            $DOTNET publish -f net8.0-ios -r ios-arm64 \
               -c Release \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.0.0" \
