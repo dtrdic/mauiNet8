@@ -55,7 +55,7 @@ workflows:
               -c Release \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.0.0" \
-              -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+              -p:ApplicationVersion=$BUILD_NUMBER \
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
