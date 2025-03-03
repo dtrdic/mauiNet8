@@ -22,12 +22,12 @@ workflows:
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --channel 9.0 --install-dir $DOTNET_PATH
+            ./dotnet-install.sh --install-dir $DOTNET_PATH
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui \
-              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet9/nuget/v3/index.json \
+              --source https://aka.ms/dotnet6/nuget/index.json \
               --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
@@ -40,7 +40,7 @@ workflows:
           script: | 
 
             $DOTNET workload list
-            
+
             LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID")
             if [ -z $LATEST_BUILD_NUMBER ]; then
               UPDATED_BUILD_NUMBER=$BUILD_NUMBER
@@ -61,7 +61,6 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
-              -p:SupportedOSPlatformVersion=12.3 \
               -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
