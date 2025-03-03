@@ -20,6 +20,8 @@ workflows:
     scripts:
         - name: Install dotnet sdk
           script: | 
+            pip3 install --upgrade codemagic-cli-tools==0.57.2
+
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
             ./dotnet-install.sh --install-dir $DOTNET_PATH
