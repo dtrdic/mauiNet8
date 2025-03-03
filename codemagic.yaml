@@ -30,8 +30,10 @@ workflows:
             $DOTNET workload install ios maui \
                 --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
                 --source https://api.nuget.org/v3/index.json
-                
-            $DOTNET workload uninstall android maui 
+
+            $DOTNET workload install android maui \
+                --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+                --source https://api.nuget.org/v3/index.json
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
