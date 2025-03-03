@@ -38,6 +38,9 @@ workflows:
             $PLIST_BUDDY -c "Add :ITSAppUsesNonExemptEncryption bool false" $PLIST
         - name: Set build version and build the app
           script: | 
+
+            $DOTNET workload list
+            
             LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID")
             if [ -z $LATEST_BUILD_NUMBER ]; then
               UPDATED_BUILD_NUMBER=$BUILD_NUMBER
@@ -49,7 +52,7 @@ workflows:
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
-            
+
             $DOTNET publish -f net9.0-ios \
               -c Release \
               -p:BuildIpa=True \
