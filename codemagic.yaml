@@ -87,8 +87,12 @@ workflows:
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
+      - name: mkdir -p ../artifacts/symbols
+        script: | 
+          mkdir -p ../artifacts/symbols
       - name: Install dotnet sdk
         script: | 
+          
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
@@ -127,8 +131,14 @@ workflows:
             -o ../artifacts
     artifacts:
       - /Users/builder/clone/artifacts/*Signed.aab
+      - /Users/builder/clone/artifacts/symbols/*
     publishing:
       google_play:
         credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS3
         track: internal
         submit_as_draft: true
+    scripts:
+      - name: progouard
+        script: |
+          
+          cp obj/Release/*/proguard/mapping.txt ../artifacts/symbols/mapping.txt

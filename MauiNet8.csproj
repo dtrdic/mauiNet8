@@ -12,7 +12,9 @@
 		The Mac App Store will NOT accept apps with ONLY maccatalyst-arm64 indicated;
 		either BOTH runtimes must be indicated or ONLY macatalyst-x64. -->
 		<!-- For example: <RuntimeIdentifiers>maccatalyst-x64;maccatalyst-arm64</RuntimeIdentifiers> -->
-
+		<AndroidEnableProguard>true</AndroidEnableProguard>
+		<AndroidLinkTool>r8</AndroidLinkTool>
+		<AndroidEnableR8>true</AndroidEnableR8>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>MauiNet8</RootNamespace>
 		<UseMaui>true</UseMaui>
