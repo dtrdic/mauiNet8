@@ -18,10 +18,11 @@ workflows:
         DOTNET:  $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
+        - name: mkdir -p ../artifacts/symbols
+          script: | 
+            mkdir -p ../artifacts/symbols
         - name: Install dotnet sdk
           script: | 
-            pip3 install --upgrade codemagic-cli-tools==0.57.2
-
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
             ./dotnet-install.sh --install-dir $DOTNET_PATH
@@ -30,10 +31,6 @@ workflows:
             $DOTNET nuget locals all --clear 
             
             $DOTNET workload install ios maui \
-                --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-                --source https://api.nuget.org/v3/index.json
-
-            $DOTNET workload install android maui \
                 --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
                 --source https://api.nuget.org/v3/index.json
         - name: Set Info.plist values
@@ -68,9 +65,14 @@ workflows:
               -o ../artifacts
     artifacts:
         - ./artifacts/*.ipa
+        - /Users/builder/clone/artifacts/symbols/*
     publishing:
       app_store_connect:
         auth: integration
+      scripts:
+            - name: progouard
+              script: |
+                cp obj/Release/*/proguard/mapping.txt ../artifacts/symbols/mapping.txt
 
   maui-android:
     name: Android
@@ -87,9 +89,7 @@ workflows:
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
-      - name: mkdir -p ../artifacts/symbols
-        script: | 
-          mkdir -p ../artifacts/symbols
+
       - name: Install dotnet sdk
         script: | 
           
@@ -137,8 +137,4 @@ workflows:
         credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS3
         track: internal
         submit_as_draft: true
-    scripts:
-      - name: progouard
-        script: |
-          
-          cp obj/Release/*/proguard/mapping.txt ../artifacts/symbols/mapping.txt
+   
