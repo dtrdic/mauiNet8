@@ -18,8 +18,6 @@ workflows:
         DOTNET:  $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
     scripts:
-
-
         - name: Install dotnet sdk
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
@@ -31,9 +29,6 @@ workflows:
             $DOTNET workload install ios maui \
               --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
               --source https://api.nuget.org/v3/index.json   
-        - name: dotnet workload uninstall android
-          script: | 
-              $DOTNET workload uninstall android
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
