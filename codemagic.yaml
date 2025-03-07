@@ -56,7 +56,7 @@ workflows:
             $DOTNET restore
 
 
-            $DOTNET build -f net8.0-ios
+            $DOTNET build MauiNet8.csproj -f net8.0-ios --no-restore
 
             $DOTNET publish -f net8.0-ios --no-restore \
               -c Release \
