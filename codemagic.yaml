@@ -1,6 +1,6 @@
 workflows:
   maui-ios:
-    name: MAUI NET9 ios
+    name: MAUI ios
     max_build_duration: 120
     instance_type: mac_mini_m1
     triggering:
@@ -20,60 +20,58 @@ workflows:
     scripts:
         - name: Install dotnet sdk
           script: | 
-            pip3 install --upgrade codemagic-cli-tools==0.57.2
-
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --install-dir $DOTNET_PATH
+            ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
-            
-            $DOTNET workload install ios maui \
-                --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-                --source https://api.nuget.org/v3/index.json
-
-            $DOTNET workload install android maui \
-                --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-                --source https://api.nuget.org/v3/index.json
+            $DOTNET workload install ios maui --source https://aka.ms/dotnet8/nuget/index.json --source https://api.nuget.org/v3/index.json
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
 
-            PLIST=$CM_BUILD_DIR/src/WeatherTwentyOne/Platforms/iOS/Info.plist
+            PLIST=$CM_BUILD_DIR/VirtualGate/Platforms/iOS/Info.plist
             PLIST_BUDDY=/usr/libexec/PlistBuddy
             $PLIST_BUDDY -c "Add :ITSAppUsesNonExemptEncryption bool false" $PLIST
+
         - name: Set build version and build the app
           script: | 
-            LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_STORE_APPLE_ID")
+            LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_ID")
             if [ -z $LATEST_BUILD_NUMBER ]; then
               UPDATED_BUILD_NUMBER=$BUILD_NUMBER
             else
-              UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
+              UPDATED_BUILD_NUMBER=$((LATEST_BUILD_NUMBER + 1))
             fi
-            
+
+            echo "Updated build number: $UPDATED_BUILD_NUMBER"
             CERT_NAME=$(keychain list-certificates | jq -r '.[] | .common_name')
+            echo "Cert Name: $CERT_NAME"
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
-            
+            echo "Profile Name: $PROFILE_NAME"
+
+            ls -l
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
+
             $DOTNET publish -f net8.0-ios \
               -c Release \
               -p:BuildIpa=True \
-              -p:ApplicationDisplayVersion="1.0.0" \
+              -p:ApplicationDisplayVersion="1.26.0" \
               -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
               -p:RuntimeIdentifier=ios-arm64 \
-              -p:CodesignKey="$CERT_NAME" \
-              -p:CodesignProvision="$PROFILE_NAME" \
-              -p:SupportedOSPlatformVersion=12.3 \
+              -p:CodesignKey="\"$CERT_NAME\"" \
+              -p:CodesignProvision="\"$PROFILE_NAME\""  \
               -o ../artifacts
+          
     artifacts:
+        - $CM_BUILD_DIR/bin/Release/net8.0-ios/ios-arm64/*.app.dSYM
         - ./artifacts/*.ipa
     publishing:
       app_store_connect:
         auth: integration
 
   maui-android:
-    name: Android
+    name: Maui Android
     max_build_duration: 120
     instance_type: mac_mini_m2
     environment:
@@ -115,14 +113,14 @@ workflows:
             UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
           fi
 
-          $DOTNET publish -f net8.0-android \
+          $DOTNET publish MauiNet8.csproj -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
             -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \
             -p:AndroidSigningKeyPass=$CM_KEY_PASSWORD \
             -p:AndroidSigningStorePass=$CM_KEYSTORE_PASSWORD \
-            -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
+            -p:ApplicationVersion=$BUILD_NUMBER \
             -p:ApplicationDisplayVersion="1.0.0" \
             -o ../artifacts
     artifacts:
@@ -132,3 +130,4 @@ workflows:
         credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS3
         track: internal
         submit_as_draft: true
+
