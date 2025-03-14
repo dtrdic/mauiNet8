@@ -38,7 +38,7 @@ workflows:
         - name: Set build version and build the app
           script: | 
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
-            $DOTNET restore -f net8.0-ios
+            $DOTNET restore --runtime ios-arm64
 
             LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_ID")
             if [ -z $LATEST_BUILD_NUMBER ]; then
