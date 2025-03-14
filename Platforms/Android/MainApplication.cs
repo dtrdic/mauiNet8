@@ -1,5 +1,8 @@
-﻿using Android.App;
+﻿if ANDROID
+
+using Android.App;
 using Android.Runtime;
+#endif
 
 namespace MauiNet8;
 
