@@ -38,7 +38,7 @@ workflows:
         - name: Set build version and build the app
           script: | 
             LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_ID")
-            if [ -z $LATEST_BUILD_NUMBER ]; then
+            if [ -z "$LATEST_BUILD_NUMBER" ]; then
               UPDATED_BUILD_NUMBER=$BUILD_NUMBER
             else
               UPDATED_BUILD_NUMBER=$((LATEST_BUILD_NUMBER + 1))
@@ -50,7 +50,7 @@ workflows:
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             echo "Profile Name: $PROFILE_NAME"
 
-            cd $CM_BUILD_DIR
+            cd "$CM_BUILD_DIR"
 
             $DOTNET publish MauiNet8.csproj -f net8.0-ios \
               -c Release \
@@ -60,8 +60,8 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
+              -p:AndroidEnable=false \
               -o ../artifacts
-          
     artifacts:
         - $CM_BUILD_DIR/bin/Release/net8.0-ios/ios-arm64/*.app.dSYM
         - ./artifacts/*.ipa
