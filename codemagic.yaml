@@ -22,13 +22,11 @@ workflows:
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+            ./dotnet-install.sh --install-dir $DOTNET_PATH
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui --source https://aka.ms/dotnet8/nuget/index.json --source https://api.nuget.org/v3/index.json
-            export DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0
-
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
@@ -39,9 +37,6 @@ workflows:
 
         - name: Set build version and build the app
           script: | 
-            $DOTNET nuget list source
-            $DOTNET workload restore 
-
             LATEST_BUILD_NUMBER=$(app-store-connect get-latest-testflight-build-number "$APP_ID")
             if [ -z "$LATEST_BUILD_NUMBER" ]; then
               UPDATED_BUILD_NUMBER=$BUILD_NUMBER
