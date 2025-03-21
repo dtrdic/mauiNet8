@@ -60,7 +60,6 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="\"$CERT_NAME\"" \
               -p:CodesignProvision="\"$PROFILE_NAME\"" \
-              -p:AndroidEnable=false \ 
               -o ../artifacts
           
     artifacts:
