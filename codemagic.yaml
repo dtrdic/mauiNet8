@@ -58,9 +58,8 @@ workflows:
               -p:ApplicationDisplayVersion="1.26.0" \
               -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
               -p:RuntimeIdentifier=ios-arm64 \
-              -p:CodesignKey="\"$CERT_NAME\"" \
-              -p:CodesignProvision="\"$PROFILE_NAME\"" \
-              -p:AndroidEnable=false \ 
+              -p:CodesignKey="$CERT_NAME" \
+              -p:CodesignProvision="$PROFILE_NAME" \
               -o ../artifacts
           
     artifacts:
