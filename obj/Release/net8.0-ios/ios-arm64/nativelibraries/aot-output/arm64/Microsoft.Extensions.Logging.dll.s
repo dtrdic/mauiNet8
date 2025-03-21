@@ -1,0 +1,3537 @@
+.subsections_via_symbols
+.section __DWARF, __debug_line,regular,debug
+Ldebug_line_section_start:
+Ldebug_line_start:
+.section __DWARF, __debug_abbrev,regular,debug
+Ldebug_abbrev_start:
+
+	.byte 1,17,1,37,8,3,8,27,8,19,11,17,1,18,1,16,6,0,0,2,46,1,3,8,135,64,8,58,15,59,15,17
+	.byte 1,18,1,64,10,0,0,3,5,0,3,8,73,19,2,10,0,0,15,5,0,3,8,73,19,2,6,0,0,4,36,0
+	.byte 11,11,62,11,3,8,0,0,5,2,1,3,8,11,15,0,0,17,2,0,3,8,11,15,0,0,6,13,0,3,8,73
+	.byte 19,56,10,0,0,7,22,0,3,8,73,19,0,0,8,4,1,3,8,11,15,73,19,0,0,9,40,0,3,8,28,13
+	.byte 0,0,10,57,1,3,8,0,0,11,52,0,3,8,73,19,2,10,0,0,12,52,0,3,8,73,19,2,6,0,0,13
+	.byte 15,0,73,19,0,0,14,16,0,73,19,0,0,16,28,0,73,19,56,10,0,0,18,46,0,3,8,17,1,18,1,0
+	.byte 0,0
+.section __DWARF, __debug_info,regular,debug
+Ldebug_info_start:
+
+LDIFF_SYM0=Ldebug_info_end - Ldebug_info_begin
+	.long LDIFF_SYM0
+Ldebug_info_begin:
+
+	.short 2
+	.long 0
+	.byte 8,1
+	.asciz "Mono AOT Compiler 8.0.13.0 (8.0.1325.6609 @Commit: eba546b0f0d448e0176a2222548fd7a2fbf464c0)"
+	.asciz "Microsoft.Extensions.Logging.dll"
+	.asciz ""
+
+	.byte 2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+LDIFF_SYM1=Ldebug_line_start - Ldebug_line_section_start
+	.long LDIFF_SYM1
+LDIE_I1:
+
+	.byte 4,1,5
+	.asciz "sbyte"
+LDIE_U1:
+
+	.byte 4,1,7
+	.asciz "byte"
+LDIE_I2:
+
+	.byte 4,2,5
+	.asciz "short"
+LDIE_U2:
+
+	.byte 4,2,7
+	.asciz "ushort"
+LDIE_I4:
+
+	.byte 4,4,5
+	.asciz "int"
+LDIE_U4:
+
+	.byte 4,4,7
+	.asciz "uint"
+LDIE_I8:
+
+	.byte 4,8,5
+	.asciz "long"
+LDIE_U8:
+
+	.byte 4,8,7
+	.asciz "ulong"
+LDIE_I:
+
+	.byte 4,8,5
+	.asciz "intptr"
+LDIE_U:
+
+	.byte 4,8,7
+	.asciz "uintptr"
+LDIE_R4:
+
+	.byte 4,4,4
+	.asciz "float"
+LDIE_R8:
+
+	.byte 4,8,4
+	.asciz "double"
+LDIE_BOOLEAN:
+
+	.byte 4,1,2
+	.asciz "boolean"
+LDIE_CHAR:
+
+	.byte 4,2,8
+	.asciz "char"
+LDIE_STRING:
+
+	.byte 4,8,1
+	.asciz "string"
+LDIE_OBJECT:
+
+	.byte 4,8,1
+	.asciz "object"
+LDIE_SZARRAY:
+
+	.byte 4,8,1
+	.asciz "object"
+.section __DWARF, __debug_loc,regular,debug
+Ldebug_loc_start:
+.section __DWARF, __debug_frame,regular,debug
+	.align 3
+
+LDIFF_SYM2=Lcie0_end - Lcie0_start
+	.long LDIFF_SYM2
+Lcie0_start:
+
+	.long -1
+	.byte 3
+	.asciz ""
+
+	.byte 1,120,30
+	.align 3
+Lcie0_end:
+.text
+	.align 3
+jit_code_start:
+_mono_aot_Microsoft_Extensions_Loggingjit_code_start:
+	.globl _mono_aot_Microsoft_Extensions_Loggingjit_code_start
+
+	.byte 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+.text
+	.align 4
+	.no_dead_strip Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions:
+.file 1 "<unknown>"
+.loc 1 1 0
+.word 0xa9b47bfd
+.word 0x910003fd
+.word 0xa90167b8
+.word 0xf90013ba
+.word 0xaa0003f9
+.word 0xaa0103fa
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0xf90027bf
+.word 0x390143bf
+.word 0xf9002fbf
+.word 0xd2800000
+.word 0xf9001fa0
+.word 0xf90023a0
+.word 0xd2800000
+.word 0xf90017a0
+.word 0xf9001ba0
+.word 0xf9401320
+.word 0xf90027a0
+.word 0xd2a00000
+.word 0x390143a0
+.word 0xf94027b8
+.word 0x910143a0
+.word 0xf90033a0
+.word 0xaa1803e0
+.word 0x910143a1
+bl _mono_monitor_enter_v4_fast
+.word 0x93407c00
+.word 0x35000080
+.word 0xaa1803e0
+.word 0xf94033a1
+bl _p_46
+.word 0x9100c320
+.word 0xf90053a0
+.word 0xd5033bbf
+.word 0xf94053a0
+.word 0xf900001a
+.word 0xd349fc00
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0000
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x1, [x16, #16]
+.word 0x8b010000
+.word 0xd280003e
+.word 0x3900001e
+.word 0xf9400b20
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #192]
+.word 0x3940001e
+bl _p_114
+.word 0xf9002fa0
+.word 0x14000048
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0xf9402fa1
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #200]
+.word 0x9100e3a0
+.word 0xf90037a0
+.word 0xaa0103e0
+.word 0xf9400021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #208]
+.word 0x928004f0
+.word 0xf8706830
+.word 0xd63f0200
+.word 0xf94037be
+.word 0xf90003c0
+.word 0xf90007c1
+.word 0xf94023ba
+.word 0xaa1a03e0
+.word 0xf9005ba0
+.word 0xaa1a03f8
+.word 0x3940035e
+.word 0xf9400f41
+.word 0x9100a3a0
+.word 0xf90037a0
+.word 0xaa1903e0
+bl _p_44
+.word 0xf94037be
+.word 0xf90003c0
+.word 0xf90007c1
+.word 0xf9405ba0
+.word 0xf94017a1
+.word 0xf90057a1
+.word 0x3940001e
+.word 0x91008001
+.word 0xd5033bbf
+.word 0xf94057a0
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf9401ba0
+.word 0xf90053a0
+.word 0x3940035e
+.word 0x9100a341
+.word 0xd5033bbf
+.word 0xf94053a0
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf9402fa1
+.word 0xaa0103e0
+.word 0xf9400021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #216]
+.word 0x92800ef0
+.word 0xf8706830
+.word 0xd63f0200
+.word 0x53001c00
+.word 0x35fff5e0
+.word 0xf9003bbf
+.word 0x9400000a
+.word 0xf9403ba0
+.word 0xb4000040
+bl _p_37
+.word 0xf9003fbf
+.word 0x94000019
+.word 0xf9403fa0
+.word 0xb4000040
+bl _p_37
+.word 0x14000022
+.word 0xf90043be
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0xf9402fa0
+.word 0xb4000140
+.word 0xf9402fa1
+.word 0xaa0103e0
+.word 0xf9400021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #224]
+.word 0x928004f0
+.word 0xf8706830
+.word 0xd63f0200
+.word 0xf94043be
+.word 0xd61f03c0
+.word 0xf9004bbe
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0x394143a0
+.word 0x34000060
+.word 0xf94027a0
+bl _p_47
+.word 0xf9404bbe
+.word 0xd61f03c0
+.word 0xa94167b8
+.word 0xf94013ba
+.word 0x910003bf
+.word 0xa8cc7bfd
+.word 0xd65f03c0
+
+Lme_1a:
+.text
+	.align 4
+	.no_dead_strip Microsoft_Extensions_Logging_LoggerFactory_Dispose
+Microsoft_Extensions_Logging_LoggerFactory_Dispose:
+.loc 1 1 0
+.word 0xa9b47bfd
+.word 0x910003fd
+.word 0xa9016bb9
+.word 0xaa0003fa
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0xd2800000
+.word 0xf90023a0
+.word 0xf90027a0
+.word 0xf9002ba0
+.word 0xf9002fa0
+.word 0xd2800000
+.word 0xf9001ba0
+.word 0xf9001fa0
+.word 0x39412340
+.word 0xf9005ba0
+.word 0xd5033bbf
+.word 0xd5033bbf
+.word 0xf9405ba0
+.word 0x35000b80
+.word 0xd5033bbf
+.word 0xd280003e
+.word 0x3901235e
+.word 0xf9401740
+.word 0xaa0003f9
+.word 0xb5000040
+.word 0x14000009
+.word 0xaa1903e0
+.word 0xf9400321
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #224]
+.word 0x928004f0
+.word 0xf8706830
+.word 0xd63f0200
+.word 0xf9400f40
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #232]
+.word 0x3940001e
+.word 0x910103a8
+bl _p_115
+.word 0x1400002d
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0x910103a0
+.word 0xf90033a0
+.word 0xf94033a0
+.word 0x91004000
+.word 0xf9400001
+.word 0xf90013a1
+.word 0xf9400400
+.word 0xf90017a0
+.word 0xf94013a0
+.word 0xf9001ba0
+.word 0xf94017a0
+.word 0xf9001fa0
+.word 0x3940e3a0
+.word 0x34000140
+.word 0xf9401ba1
+.word 0xaa0103e0
+.word 0xf9400021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #224]
+.word 0x928004f0
+.word 0xf8706830
+.word 0xd63f0200
+.word 0x1400000f
+.word 0xf9003fa0
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+bl _p_26
+.word 0xf90053a0
+.word 0xf94053a0
+.word 0xb4000060
+.word 0xf94053a0
+bl _p_4
+.word 0x14000001
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #240]
+.word 0x910103a0
+bl _p_116
+.word 0x53001c00
+.word 0x35fff9c0
+.word 0xf90037bf
+.word 0x94000005
+.word 0xf94037a0
+.word 0xb4000040
+bl _p_37
+.word 0x1400000c
+.word 0xf9004bbe
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0x910103a0
+.word 0xf9003ba0
+.word 0xf9404bbe
+.word 0xd61f03c0
+.word 0xa9416bb9
+.word 0x910003bf
+.word 0xa8cc7bfd
+.word 0xd65f03c0
+
+Lme_20:
+.text
+ut_46:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool
+ut_end:
+.section __TEXT, __const
+_unbox_trampoline_p:
+
+	.long 0
+LDIFF_SYM3=ut_end - ut_46
+	.long LDIFF_SYM3
+.text
+ut_47:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger
+.text
+ut_48:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Category
+.text
+ut_49:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_ProviderTypeFullName
+.text
+ut_50:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_MinLevel
+.text
+ut_51:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Filter
+.text
+ut_52:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel
+.text
+ut_53:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ScopeLogger__ctor_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_IExternalScopeProvider
+.text
+ut_54:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string
+.text
+ut_55:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Logger
+.text
+ut_56:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Category
+.text
+ut_57:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ProviderType
+.text
+ut_58:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ExternalScope
+.text
+	.align 4
+	.no_dead_strip Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string
+Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string:
+.loc 1 1 0
+.word 0xa9b87bfd
+.word 0x910003fd
+.word 0xa90153b3
+.word 0xa9025bb5
+.word 0xa90363b7
+.word 0xa9046bb9
+.word 0xf90037af
+.word 0xaa0003f7
+.word 0xaa0103f8
+.word 0xf9002ba2
+.word 0xf9002fa3
+.word 0xf90033a4
+.word 0xaa0503f9
+.word 0xaa0603fa
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x1, [x16, #248]
+.word 0xf94037a0
+.word 0xf9400c10
+.word 0xb5000050
+bl _mini_init_method_rgctx
+.word 0xf94037a0
+.word 0xf9401016
+.word 0xb98002c0
+.word 0xd2800015
+.word 0xf9003bbf
+.word 0xaa1703e0
+bl _p_117
+.word 0xaa0003f7
+.word 0xaa1703e0
+.word 0xb4000740
+.word 0xf9003bbf
+.word 0xd2a00014
+.word 0x14000025
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0x93407e80
+.word 0xb9801ae1
+.word 0xeb00003f
+.word 0x10000011
+.word 0x54000669
+.word 0xd280051e
+.word 0x9b1e7c00
+.word 0x8b0002e0
+.word 0x91008013
+.word 0xaa1303e0
+.word 0xaa1803e1
+bl _p_19
+.word 0x53001c00
+.word 0x34000200
+.word 0xaa1303e0
+bl _p_118
+.word 0xaa0003e3
+.word 0xf94033a7
+.word 0xf94037a0
+.word 0xf940140f
+.word 0xf94037a0
+.word 0xf9401809
+.word 0xaa1803e0
+.word 0xf9402ba1
+.word 0xf9402fa2
+.word 0xaa1903e4
+.word 0xaa1a03e5
+.word 0x9101c3a6
+.word 0xd63f0120
+.word 0x11000694
+.word 0xb9801ae0
+.word 0x6b00029f
+.word 0x54fffb4b
+.word 0xf9403ba0
+.word 0xb40001c0
+.word 0xf9403ba0
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #256]
+.word 0x3940001e
+.word 0xf94037a1
+.word 0xf9401c21
+.word 0xd63f0020
+.word 0x93407c00
+.word 0x6b1f001f
+.word 0x5400006d
+.word 0xf9403ba0
+bl _p_21
+.word 0xa94153b3
+.word 0xa9425bb5
+.word 0xa94363b7
+.word 0xa9446bb9
+.word 0x910003bf
+.word 0xa8c87bfd
+.word 0xd65f03c0
+.word 0xd2801840
+.word 0xaa1103e1
+bl _p_119
+
+Lme_43:
+.text
+	.align 4
+	.no_dead_strip Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_
+Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_:
+.loc 1 1 0
+.word 0xa9b67bfd
+.word 0x910003fd
+.word 0xa90157b4
+.word 0xf90033af
+.word 0xf90013a0
+.word 0xf90017a1
+.word 0xf9001ba2
+.word 0xf9001fa3
+.word 0xf90023a4
+.word 0xf90027a5
+.word 0xf9002ba6
+.word 0xf9002fa7
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x1, [x16, #264]
+.word 0xf94033a0
+.word 0xf9400c10
+.word 0xb5000050
+bl _mini_init_method_rgctx
+.word 0xf94033a0
+.word 0xf9401015
+.word 0xb98002a0
+.word 0x91003c10
+.word 0x928001f1
+.word 0x8a110210
+.word 0x910003f1
+.word 0xcb100231
+.word 0x9100023f
+.word 0x8b100230
+.word 0xeb10023f
+.word 0x54000080
+.word 0xa9007e3f
+.word 0x91004231
+.word 0x17fffffc
+.word 0x910003f4
+.word 0xf90037bf
+.word 0xf9402fa1
+.word 0xb9801aa0
+.word 0x8b000280
+.word 0xf94006a2
+.word 0xf9400aa3
+.word 0xd63f0060
+.word 0xf94033a0
+.word 0xf9401400
+.word 0xf94033a0
+.word 0xf940180f
+.word 0xf94033a0
+.word 0xf9401c07
+.word 0xf9401fa0
+.word 0xb98023a1
+.word 0xf94017a2
+.word 0xf9401ba3
+.word 0xb9801aa4
+.word 0x8b040284
+.word 0xf94023a5
+.word 0xf94027a6
+.word 0xd63f00e0
+.word 0x14000038
+.word 0xf9003ba0
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #56]
+.word 0xf9400011
+.word 0xb4000051
+bl _p_1
+.word 0xf9403ba0
+.word 0xf90037a0
+.word 0xf9402ba0
+.word 0xf9400000
+.word 0xb5000360
+.word 0xf9402ba0
+.word 0xf9004fa0
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x0, [x16, #272]
+.word 0xd2800401
+bl _p_9
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #280]
+.word 0xf9004ba0
+bl _p_120
+.word 0xf9404fa1
+.word 0xd5033bbf
+.word 0xf9404ba0
+.word 0xf9000020
+.word 0xd349fc21
+.word 0xd29ffffe
+.word 0xf2a00ffe
+.word 0x8a1e0021
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x2, [x16, #16]
+.word 0x8b020021
+.word 0xd280003e
+.word 0x3900003e
+.word 0xf9402ba0
+.word 0xf9400000
+.word 0xf94037a1
+
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x15, [x16, #288]
+.word 0x3940001e
+.word 0xf94033a2
+.word 0xf9402042
+.word 0xd63f0040
+bl _p_26
+.word 0xf90047a0
+.word 0xf94047a0
+.word 0xb4000060
+.word 0xf94047a0
+bl _p_4
+.word 0x14000001
+.word 0xa94157b4
+.word 0x910003bf
+.word 0xa8ca7bfd
+.word 0xd65f03c0
+
+Lme_44:
+.text
+ut_146:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.text
+ut_147:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Dispose
+.text
+ut_148:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext
+.text
+ut_149:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare
+.text
+ut_150:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+.text
+ut_151:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_get_Current
+.text
+ut_152:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_Reset
+.text
+ut_155:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_StructureToPtr_object_intptr_bool
+.text
+ut_156:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_PtrToStructure_intptr_object
+.text
+ut_157:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_StructureToPtr_object_intptr_bool
+.text
+ut_158:
+add x0, x0, 16
+b _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_PtrToStructure_intptr_object
+.text
+	.align 3
+jit_code_end:
+_mono_aot_Microsoft_Extensions_Loggingjit_code_end:
+	.globl _mono_aot_Microsoft_Extensions_Loggingjit_code_end
+
+	.byte 0,0,0,0
+.no_dead_strip _Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string
+.no_dead_strip _Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string
+.no_dead_strip _Microsoft_Extensions_Logging_System_SR_Format_string_object
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__AddLoggingb__0_0_Microsoft_Extensions_Logging_ILoggingBuilder
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__c__DisplayClass0_0__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__c__DisplayClass0_0___ctorb__0_Microsoft_Extensions_Logging_LoggerFilterOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__ctor_string_Microsoft_Extensions_Logging_LoggerInformation__
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_Loggers
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_Loggers_Microsoft_Extensions_Logging_LoggerInformation__
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_MessageLoggers_Microsoft_Extensions_Logging_MessageLogger__
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_ScopeLoggers_Microsoft_Extensions_Logging_ScopeLogger__
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_Log_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_REF_System_Exception_System_Func_3_TState_REF_System_Exception_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF_
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Logging_LoggerFilterOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLogger_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation__
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CheckDisposed
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryOptions__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryOptions_get_ActivityTrackingOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryScopeProvider__ctor_Microsoft_Extensions_Logging_ActivityTrackingOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryScopeProvider_Scope_Dispose
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_CaptureScopes
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_MinLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_set_MinLevel_Microsoft_Extensions_Logging_LogLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_RulesInternal
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Category
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_ProviderTypeFullName
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_MinLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Filter
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ScopeLogger__ctor_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_IExternalScopeProvider
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Logger
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Category
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ProviderType
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ExternalScope
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggingBuilder__ctor_Microsoft_Extensions_DependencyInjection_IServiceCollection
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor_OnChange_System_Action_2_Microsoft_Extensions_Logging_LoggerFilterOptions_string
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor_get_CurrentValue
+.no_dead_strip _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_T_REF_invoke_void_T_T_REF
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_T_REF_invoke_bool_T_T_REF
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_T_REF_invoke_int_T_T_T_REF_T_REF
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Func_2_T_REF_TResult_REF_invoke_TResult_T_T_REF
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___int
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_void_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_bool_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_int_T_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_2_T1_REF_T2_REF_invoke_void_T1_T2_T1_REF_T2_REF
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___int
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_MessageLogger_invoke_void_T_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_MessageLogger_invoke_bool_T_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_MessageLogger_invoke_int_T_T_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___int
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_void_T_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_bool_T_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_int_T_T_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Dispose
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_Reset
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_runtime_invoke__Module_runtime_invoke_void__this___object_object_object_Nullable_1_LogLevel_object_intptr__intptr_intptr_intptr
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_runtime_invoke__Module_runtime_invoke_void_object_object_object_Nullable_1_LogLevel__intptr__object_intptr_intptr_intptr
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_StructureToPtr_object_intptr_bool
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_PtrToStructure_intptr_object
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_StructureToPtr_object_intptr_bool
+.no_dead_strip _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_PtrToStructure_intptr_object
+.no_dead_strip _mono_aot_Microsoft_Extensions_Logging_init_method
+.no_dead_strip _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_mrgctx
+.no_dead_strip _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_this
+.no_dead_strip _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_vtable
+.no_dead_strip _mono_aot_Microsoft_Extensions_Logging_icall_cold_wrapper_264
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___int
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_MessageLogger___int
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEnumerator_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger__ctor_Microsoft_Extensions_Logging_ScopeLogger___int
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEnumerator_get_Current
+.no_dead_strip _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger__cctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Default
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEqualityComparer_GetHashCode_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEqualityComparer_Equals_object_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_LastIndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_get_Default
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEqualityComparer_GetHashCode_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEqualityComparer_Equals_object_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_LastIndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_get_Default
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEqualityComparer_GetHashCode_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEqualityComparer_Equals_object_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_LastIndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Equals_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetHashCode_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Equals_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetHashCode
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_Equals_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_GetHashCode_Microsoft_Extensions_Logging_MessageLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_Equals_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_GetHashCode
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger__ctor
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_Equals_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_GetHashCode_Microsoft_Extensions_Logging_ScopeLogger
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_Equals_object
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_GetHashCode
+.no_dead_strip _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger__ctor
+
+.text
+	.align 3
+method_addresses:
+_mono_aot_Microsoft_Extensions_Loggingmethod_addresses:
+	.globl _mono_aot_Microsoft_Extensions_Loggingmethod_addresses
+	.no_dead_strip method_addresses
+bl _Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string
+bl _Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string
+bl _Microsoft_Extensions_Logging_System_SR_Format_string_object
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__cctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__ctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions__c__AddLoggingb__0_0_Microsoft_Extensions_Logging_ILoggingBuilder
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__c__DisplayClass0_0__ctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__c__DisplayClass0_0___ctorb__0_Microsoft_Extensions_Logging_LoggerFilterOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__ctor_string_Microsoft_Extensions_Logging_LoggerInformation__
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_Loggers
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_Loggers_Microsoft_Extensions_Logging_LoggerInformation__
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_MessageLoggers_Microsoft_Extensions_Logging_MessageLogger__
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_set_ScopeLoggers_Microsoft_Extensions_Logging_ScopeLogger__
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_Log_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_REF_System_Exception_System_Func_3_TState_REF_System_Exception_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF_
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Logging_LoggerFilterOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider
+bl Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLogger_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation__
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CheckDisposed
+bl Microsoft_Extensions_Logging_LoggerFactory_Dispose
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryOptions__ctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryOptions_get_ActivityTrackingOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryScopeProvider__ctor_Microsoft_Extensions_Logging_ActivityTrackingOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactoryScopeProvider_Scope_Dispose
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions__ctor
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_CaptureScopes
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_MinLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_set_MinLevel_Microsoft_Extensions_Logging_LogLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterOptions_get_RulesInternal
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Category
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_ProviderTypeFullName
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_MinLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Filter
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ScopeLogger__ctor_Microsoft_Extensions_Logging_ILogger_Microsoft_Extensions_Logging_IExternalScopeProvider
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Logger
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_Category
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ProviderType
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation_get_ExternalScope
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggingBuilder__ctor_Microsoft_Extensions_DependencyInjection_IServiceCollection
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor_OnChange_System_Action_2_Microsoft_Extensions_Logging_LoggerFilterOptions_string
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor_get_CurrentValue
+bl _Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type
+bl method_addresses
+bl Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string
+bl Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_T_REF_invoke_void_T_T_REF
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_T_REF_invoke_bool_T_T_REF
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_T_REF_invoke_int_T_T_T_REF_T_REF
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Func_2_T_REF_TResult_REF_invoke_TResult_T_T_REF
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___int
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_void_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_bool_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_invoke_int_T_T_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_2_T1_REF_T2_REF_invoke_void_T1_T2_T1_REF_T2_REF
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_MessageLogger
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___int
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_MessageLogger_invoke_void_T_Microsoft_Extensions_Logging_MessageLogger
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_MessageLogger_invoke_bool_T_Microsoft_Extensions_Logging_MessageLogger
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_MessageLogger_invoke_int_T_T_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__IEnumerable_GetEnumerator_Microsoft_Extensions_Logging_ScopeLogger
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Add_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Remove_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_Contains_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Array_InternalArray__ICollection_CopyTo_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___int
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Action_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_void_T_Microsoft_Extensions_Logging_ScopeLogger
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Predicate_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_bool_T_Microsoft_Extensions_Logging_ScopeLogger
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_wrapper_delegate_invoke_System_Comparison_1_Microsoft_Extensions_Logging_ScopeLogger_invoke_int_T_T_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Dispose
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_get_Current
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_Reset
+bl _Microsoft_Extensions_Logging_wrapper_runtime_invoke__Module_runtime_invoke_void__this___object_object_object_Nullable_1_LogLevel_object_intptr__intptr_intptr_intptr
+bl _Microsoft_Extensions_Logging_wrapper_runtime_invoke__Module_runtime_invoke_void_object_object_object_Nullable_1_LogLevel__intptr__object_intptr_intptr_intptr
+bl _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_StructureToPtr_object_intptr_bool
+bl _Microsoft_Extensions_Logging_wrapper_other_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_PtrToStructure_intptr_object
+bl _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_StructureToPtr_object_intptr_bool
+bl _Microsoft_Extensions_Logging_wrapper_other_System_ReadOnlySpan_1_char_PtrToStructure_intptr_object
+bl _mono_aot_Microsoft_Extensions_Logging_init_method
+bl _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_mrgctx
+bl _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_this
+bl _mono_aot_Microsoft_Extensions_Logging_init_method_gshared_vtable
+bl _mono_aot_Microsoft_Extensions_Logging_icall_cold_wrapper_264
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__cctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger__cctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger__cctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___int
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEnumerator_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__cctor
+bl _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_MessageLogger___int
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEnumerator_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger__cctor
+bl _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger__ctor_Microsoft_Extensions_Logging_ScopeLogger___int
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEnumerator_get_Current
+bl _Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger__cctor
+bl _Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Default
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEqualityComparer_GetHashCode_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_System_Collections_IEqualityComparer_Equals_object_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_LastIndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_get_Default
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEqualityComparer_GetHashCode_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_System_Collections_IEqualityComparer_Equals_object_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_LastIndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger__ctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_get_Default
+bl method_addresses
+bl method_addresses
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEqualityComparer_GetHashCode_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_System_Collections_IEqualityComparer_Equals_object_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_LastIndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger__ctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Equals_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetHashCode_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Equals_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetHashCode
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_Equals_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_GetHashCode_Microsoft_Extensions_Logging_MessageLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_Equals_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_GetHashCode
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger__ctor
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_Equals_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_GetHashCode_Microsoft_Extensions_Logging_ScopeLogger
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_Equals_object
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_GetHashCode
+bl _Microsoft_Extensions_Logging_System_Collections_Generic_ObjectEqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger__ctor
+method_addresses_end:
+
+.section __TEXT, __const
+	.align 3
+unbox_trampolines:
+_mono_aot_Microsoft_Extensions_Loggingunbox_trampolines:
+	.globl _mono_aot_Microsoft_Extensions_Loggingunbox_trampolines
+
+	.long 46,47,48,49,50,51,52,53
+	.long 54,55,56,57,58,146,147,148
+	.long 149,150,151,152,155,156,157,158
+unbox_trampolines_end:
+_mono_aot_Microsoft_Extensions_Loggingunbox_trampolines_end:
+	.globl _mono_aot_Microsoft_Extensions_Loggingunbox_trampolines_end
+
+	.long 0
+.text
+	.align 3
+unbox_trampoline_addresses:
+_mono_aot_Microsoft_Extensions_Loggingunbox_trampoline_addresses:
+	.globl _mono_aot_Microsoft_Extensions_Loggingunbox_trampoline_addresses
+bl ut_46
+bl ut_47
+bl ut_48
+bl ut_49
+bl ut_50
+bl ut_51
+bl ut_52
+bl ut_53
+bl ut_54
+bl ut_55
+bl ut_56
+bl ut_57
+bl ut_58
+bl ut_146
+bl ut_147
+bl ut_148
+bl ut_149
+bl ut_150
+bl ut_151
+bl ut_152
+bl ut_155
+bl ut_156
+bl ut_157
+bl ut_158
+
+	.long 0
+.section __TEXT, __const
+	.align 3
+unwind_info:
+_mono_aot_Microsoft_Extensions_Loggingunwind_info:
+	.globl _mono_aot_Microsoft_Extensions_Loggingunwind_info
+
+	.byte 0,22,12,31,0,68,14,192,1,157,24,158,23,68,13,29,68,152,22,153,21,68,154,20,19,12,31,0,68,14,192,1
+	.byte 157,24,158,23,68,13,29,68,153,22,154,21,34,12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,147,14,148,13
+	.byte 68,149,12,150,11,68,151,10,152,9,68,153,8,154,7,19,12,31,0,68,14,160,1,157,20,158,19,68,13,29,68,148
+	.byte 18,149,17
+
+.text
+	.align 4
+plt:
+_mono_aot_Microsoft_Extensions_Loggingplt:
+	.globl _mono_aot_Microsoft_Extensions_Loggingplt
+mono_aot_Microsoft_Extensions_Logging_plt:
+_p_1_plt_Microsoft_Extensions_Logging__jit_icall_mono_threads_state_poll_llvm:
+	.globl _p_1_plt_Microsoft_Extensions_Logging__jit_icall_mono_threads_state_poll_llvm
+.private_extern _p_1_plt_Microsoft_Extensions_Logging__jit_icall_mono_threads_state_poll_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_threads_state_poll
+plt_Microsoft_Extensions_Logging__jit_icall_mono_threads_state_poll:
+_p_1:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #304]
+br x16
+.word 2213
+_p_2_plt_Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string_llvm:
+	.globl _p_2_plt_Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string_llvm
+.private_extern _p_2_plt_Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_Throw_string:
+_p_2:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #312]
+br x16
+.word 2216
+_p_3_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_1_llvm:
+	.globl _p_3_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_1_llvm
+.private_extern _p_3_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_1_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_1
+plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_1:
+_p_3:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #320]
+br x16
+.word 2218
+_p_4_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_exception_llvm:
+	.globl _p_4_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_exception_llvm
+.private_extern _p_4_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_exception
+plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_exception:
+_p_4:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #328]
+br x16
+.word 2221
+_p_5_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocVector_intptr_intptr_llvm:
+	.globl _p_5_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocVector_intptr_intptr_llvm
+.private_extern _p_5_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocVector_intptr_intptr_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocVector_intptr_intptr
+plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocVector_intptr_intptr:
+_p_5:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #336]
+br x16
+.word 2223
+_p_6_plt_Microsoft_Extensions_Logging_string_Join_string_object___llvm:
+	.globl _p_6_plt_Microsoft_Extensions_Logging_string_Join_string_object___llvm
+.private_extern _p_6_plt_Microsoft_Extensions_Logging_string_Join_string_object___llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_string_Join_string_object__
+plt_Microsoft_Extensions_Logging_string_Join_string_object__:
+_p_6:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #344]
+br x16
+.word 2231
+_p_7_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder_llvm:
+	.globl _p_7_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder_llvm
+.private_extern _p_7_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_LoggingServiceCollectionExtensions_AddLogging_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Action_1_Microsoft_Extensions_Logging_ILoggingBuilder:
+_p_7:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #352]
+br x16
+.word 2236
+_p_8_plt_Microsoft_Extensions_Logging__jit_icall_llvm_throw_corlib_exception_abs_trampoline_llvm:
+	.globl _p_8_plt_Microsoft_Extensions_Logging__jit_icall_llvm_throw_corlib_exception_abs_trampoline_llvm
+.private_extern _p_8_plt_Microsoft_Extensions_Logging__jit_icall_llvm_throw_corlib_exception_abs_trampoline_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_llvm_throw_corlib_exception_abs_trampoline
+plt_Microsoft_Extensions_Logging__jit_icall_llvm_throw_corlib_exception_abs_trampoline:
+_p_8:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #360]
+br x16
+.word 2238
+_p_9_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocSmall_intptr_intptr_llvm:
+	.globl _p_9_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocSmall_intptr_intptr_llvm
+.private_extern _p_9_plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocSmall_intptr_intptr_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocSmall_intptr_intptr
+plt_Microsoft_Extensions_Logging_wrapper_alloc_object_AllocSmall_intptr_intptr:
+_p_9:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #368]
+br x16
+.word 2241
+_p_10_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string_llvm:
+	.globl _p_10_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string_llvm
+.private_extern _p_10_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowIfNull_object_string:
+_p_10:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #376]
+br x16
+.word 2249
+_p_11_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_OptionsServiceCollectionExtensions_AddOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection_llvm:
+	.globl _p_11_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_OptionsServiceCollectionExtensions_AddOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection_llvm
+.private_extern _p_11_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_OptionsServiceCollectionExtensions_AddOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_OptionsServiceCollectionExtensions_AddOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_OptionsServiceCollectionExtensions_AddOptions_Microsoft_Extensions_DependencyInjection_IServiceCollection:
+_p_11:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #384]
+br x16
+.word 2251
+_p_12_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Logging_ILoggerFactory_Microsoft_Extensions_Logging_LoggerFactory_llvm:
+	.globl _p_12_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Logging_ILoggerFactory_Microsoft_Extensions_Logging_LoggerFactory_llvm
+.private_extern _p_12_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Logging_ILoggerFactory_Microsoft_Extensions_Logging_LoggerFactory_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Logging_ILoggerFactory_Microsoft_Extensions_Logging_LoggerFactory
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Logging_ILoggerFactory_Microsoft_Extensions_Logging_LoggerFactory:
+_p_12:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #392]
+br x16
+.word 2256
+_p_13_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm:
+	.globl _p_13_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm
+.private_extern _p_13_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAdd_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor:
+_p_13:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #400]
+br x16
+.word 2268
+_p_14_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_System_Type_System_Type_llvm:
+	.globl _p_14_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_System_Type_System_Type_llvm
+.private_extern _p_14_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_System_Type_System_Type_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_System_Type_System_Type
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_System_Type_System_Type:
+_p_14:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #408]
+br x16
+.word 2273
+_p_15_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel_llvm:
+	.globl _p_15_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel_llvm
+.private_extern _p_15_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_DefaultLoggerLevelConfigureOptions__ctor_Microsoft_Extensions_Logging_LogLevel:
+_p_15:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #416]
+br x16
+.word 2278
+_p_16_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm:
+	.globl _p_16_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+.private_extern _p_16_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_Singleton_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IConfigureOptions_1_Microsoft_Extensions_Logging_LoggerFilterOptions:
+_p_16:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #424]
+br x16
+.word 2280
+_p_17_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAddEnumerable_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm:
+	.globl _p_17_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAddEnumerable_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm
+.private_extern _p_17_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAddEnumerable_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAddEnumerable_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_DependencyInjection_Extensions_ServiceCollectionDescriptorExtensions_TryAddEnumerable_Microsoft_Extensions_DependencyInjection_IServiceCollection_Microsoft_Extensions_DependencyInjection_ServiceDescriptor:
+_p_17:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #432]
+br x16
+.word 2292
+_p_18_plt_Microsoft_Extensions_Logging__jit_icall_mini_init_method_rgctx_llvm:
+	.globl _p_18_plt_Microsoft_Extensions_Logging__jit_icall_mini_init_method_rgctx_llvm
+.private_extern _p_18_plt_Microsoft_Extensions_Logging__jit_icall_mini_init_method_rgctx_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mini_init_method_rgctx
+plt_Microsoft_Extensions_Logging__jit_icall_mini_init_method_rgctx:
+_p_18:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #440]
+br x16
+.word 2297
+_p_19_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_llvm:
+	.globl _p_19_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_llvm
+.private_extern _p_19_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_IsEnabled_Microsoft_Extensions_Logging_LogLevel:
+_p_19:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #448]
+br x16
+.word 2300
+_p_20_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF__llvm:
+	.globl _p_20_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF__llvm
+.private_extern _p_20_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF__llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF_
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_REF_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_REF_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_REF_:
+_p_20:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #456]
+br x16
+.word 2311
+_p_21_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception_llvm:
+	.globl _p_21_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception_llvm
+.private_extern _p_21_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_ThrowLoggingError_System_Collections_Generic_List_1_System_Exception:
+_p_21:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #464]
+br x16
+.word 2324
+_p_22_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_ldstr_llvm:
+	.globl _p_22_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_ldstr_llvm
+.private_extern _p_22_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_ldstr_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_ldstr
+plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_ldstr:
+_p_22:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #472]
+br x16
+.word 2326
+_p_23_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_newobj_mscorlib_llvm:
+	.globl _p_23_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_newobj_mscorlib_llvm
+.private_extern _p_23_plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_newobj_mscorlib_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_newobj_mscorlib
+plt_Microsoft_Extensions_Logging__jit_icall_mono_helper_newobj_mscorlib:
+_p_23:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #480]
+br x16
+.word 2329
+_p_24_plt_Microsoft_Extensions_Logging_System_AggregateException__ctor_string_System_Collections_Generic_IEnumerable_1_System_Exception_llvm:
+	.globl _p_24_plt_Microsoft_Extensions_Logging_System_AggregateException__ctor_string_System_Collections_Generic_IEnumerable_1_System_Exception_llvm
+.private_extern _p_24_plt_Microsoft_Extensions_Logging_System_AggregateException__ctor_string_System_Collections_Generic_IEnumerable_1_System_Exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_AggregateException__ctor_string_System_Collections_Generic_IEnumerable_1_System_Exception
+plt_Microsoft_Extensions_Logging_System_AggregateException__ctor_string_System_Collections_Generic_IEnumerable_1_System_Exception:
+_p_24:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #488]
+br x16
+.word 2332
+_p_25_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception_AddWithResize_System_Exception_llvm:
+	.globl _p_25_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception_AddWithResize_System_Exception_llvm
+.private_extern _p_25_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception_AddWithResize_System_Exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception_AddWithResize_System_Exception
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception_AddWithResize_System_Exception:
+_p_25:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #496]
+br x16
+.word 2337
+_p_26_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_get_undeniable_exception_llvm:
+	.globl _p_26_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_get_undeniable_exception_llvm
+.private_extern _p_26_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_get_undeniable_exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_get_undeniable_exception
+plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_get_undeniable_exception:
+_p_26:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #504]
+br x16
+.word 2354
+_p_27_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_llvm:
+	.globl _p_27_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_llvm
+.private_extern _p_27_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider:
+_p_27:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #512]
+br x16
+.word 2357
+_p_28_plt_Microsoft_Extensions_Logging__jit_icall_mono_generic_class_init_llvm:
+	.globl _p_28_plt_Microsoft_Extensions_Logging__jit_icall_mono_generic_class_init_llvm
+.private_extern _p_28_plt_Microsoft_Extensions_Logging__jit_icall_mono_generic_class_init_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_generic_class_init
+plt_Microsoft_Extensions_Logging__jit_icall_mono_generic_class_init:
+_p_28:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #520]
+br x16
+.word 2359
+_p_29_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm:
+	.globl _p_29_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+.private_extern _p_29_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_StaticFilterOptionsMonitor__ctor_Microsoft_Extensions_Logging_LoggerFilterOptions:
+_p_29:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #528]
+br x16
+.word 2362
+_p_30_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm:
+	.globl _p_30_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+.private_extern _p_30_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions:
+_p_30:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #536]
+br x16
+.word 2364
+_p_31_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_llvm:
+	.globl _p_31_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_llvm
+.private_extern _p_31_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions:
+_p_31:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #544]
+br x16
+.word 2366
+_p_32_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider_llvm:
+	.globl _p_32_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider_llvm
+.private_extern _p_32_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory__ctor_System_Collections_Generic_IEnumerable_1_Microsoft_Extensions_Logging_ILoggerProvider_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptions_1_Microsoft_Extensions_Logging_LoggerFactoryOptions_Microsoft_Extensions_Logging_IExternalScopeProvider:
+_p_32:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #552]
+br x16
+.word 2368
+_p_33_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger__ctor_System_Collections_Generic_IEqualityComparer_1_string_llvm:
+	.globl _p_33_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger__ctor_System_Collections_Generic_IEqualityComparer_1_string_llvm
+.private_extern _p_33_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger__ctor_System_Collections_Generic_IEqualityComparer_1_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger__ctor_System_Collections_Generic_IEqualityComparer_1_string
+plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger__ctor_System_Collections_Generic_IEqualityComparer_1_string:
+_p_33:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #560]
+br x16
+.word 2370
+_p_34_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Options_OptionsMonitorExtensions_OnChange_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Action_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm:
+	.globl _p_34_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Options_OptionsMonitorExtensions_OnChange_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Action_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+.private_extern _p_34_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Options_OptionsMonitorExtensions_OnChange_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Action_1_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Options_OptionsMonitorExtensions_OnChange_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Action_1_Microsoft_Extensions_Logging_LoggerFilterOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Options_OptionsMonitorExtensions_OnChange_Microsoft_Extensions_Logging_LoggerFilterOptions_Microsoft_Extensions_Options_IOptionsMonitor_1_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Action_1_Microsoft_Extensions_Logging_LoggerFilterOptions:
+_p_34:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #568]
+br x16
+.word 2381
+_p_35_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm:
+	.globl _p_35_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+.private_extern _p_35_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions:
+_p_35:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #576]
+br x16
+.word 2393
+_p_36_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool_llvm:
+	.globl _p_36_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool_llvm
+.private_extern _p_36_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_AddProviderRegistration_Microsoft_Extensions_Logging_ILoggerProvider_bool:
+_p_36:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #584]
+br x16
+.word 2395
+_p_37_plt_Microsoft_Extensions_Logging__jit_icall_ves_icall_thread_finish_async_abort_llvm:
+	.globl _p_37_plt_Microsoft_Extensions_Logging__jit_icall_ves_icall_thread_finish_async_abort_llvm
+.private_extern _p_37_plt_Microsoft_Extensions_Logging__jit_icall_ves_icall_thread_finish_async_abort_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_ves_icall_thread_finish_async_abort
+plt_Microsoft_Extensions_Logging__jit_icall_ves_icall_thread_finish_async_abort:
+_p_37:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #592]
+br x16
+.word 2397
+_p_38_plt_Microsoft_Extensions_Logging_System_SR_Format_string_object_llvm:
+	.globl _p_38_plt_Microsoft_Extensions_Logging_System_SR_Format_string_object_llvm
+.private_extern _p_38_plt_Microsoft_Extensions_Logging_System_SR_Format_string_object_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SR_Format_string_object
+plt_Microsoft_Extensions_Logging_System_SR_Format_string_object:
+_p_38:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #600]
+br x16
+.word 2400
+_p_39_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_2_llvm:
+	.globl _p_39_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_2_llvm
+.private_extern _p_39_plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_2_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_2
+plt_Microsoft_Extensions_Logging__jit_icall_mono_create_corlib_exception_2:
+_p_39:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #608]
+br x16
+.word 2402
+_p_40_plt_Microsoft_Extensions_Logging__jit_icall_llvm_resume_unwind_trampoline_llvm:
+	.globl _p_40_plt_Microsoft_Extensions_Logging__jit_icall_llvm_resume_unwind_trampoline_llvm
+.private_extern _p_40_plt_Microsoft_Extensions_Logging__jit_icall_llvm_resume_unwind_trampoline_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_llvm_resume_unwind_trampoline
+plt_Microsoft_Extensions_Logging__jit_icall_llvm_resume_unwind_trampoline:
+_p_40:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #616]
+br x16
+.word 2405
+_p_41_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_TryGetValue_string_Microsoft_Extensions_Logging_Logger__llvm:
+	.globl _p_41_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_TryGetValue_string_Microsoft_Extensions_Logging_Logger__llvm
+.private_extern _p_41_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_TryGetValue_string_Microsoft_Extensions_Logging_Logger__llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_TryGetValue_string_Microsoft_Extensions_Logging_Logger_
+plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_TryGetValue_string_Microsoft_Extensions_Logging_Logger_:
+_p_41:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #624]
+br x16
+.word 2408
+_p_42_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_fast_llvm:
+	.globl _p_42_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_fast_llvm
+.private_extern _p_42_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_fast_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_fast
+plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_fast:
+_p_42:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #632]
+br x16
+.word 2419
+_p_43_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string_llvm:
+	.globl _p_43_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string_llvm
+.private_extern _p_43_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_CreateLoggers_string:
+_p_43:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #640]
+br x16
+.word 2422
+_p_44_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation___llvm:
+	.globl _p_44_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation___llvm
+.private_extern _p_44_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation___llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation__
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFactory_ApplyFilters_Microsoft_Extensions_Logging_LoggerInformation__:
+_p_44:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #648]
+br x16
+.word 2424
+_p_45_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_set_Item_string_Microsoft_Extensions_Logging_Logger_llvm:
+	.globl _p_45_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_set_Item_string_Microsoft_Extensions_Logging_Logger_llvm
+.private_extern _p_45_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_set_Item_string_Microsoft_Extensions_Logging_Logger_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_set_Item_string_Microsoft_Extensions_Logging_Logger
+plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_set_Item_string_Microsoft_Extensions_Logging_Logger:
+_p_45:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #656]
+br x16
+.word 2426
+_p_46_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_internal_llvm:
+	.globl _p_46_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_internal_llvm
+.private_extern _p_46_plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_internal_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_internal
+plt_Microsoft_Extensions_Logging__jit_icall_mono_monitor_enter_v4_internal:
+_p_46:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #664]
+br x16
+.word 2437
+_p_47_plt_Microsoft_Extensions_Logging_System_Threading_Monitor_Exit_object_llvm:
+	.globl _p_47_plt_Microsoft_Extensions_Logging_System_Threading_Monitor_Exit_object_llvm
+.private_extern _p_47_plt_Microsoft_Extensions_Logging_System_Threading_Monitor_Exit_object_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Threading_Monitor_Exit_object
+plt_Microsoft_Extensions_Logging_System_Threading_Monitor_Exit_object:
+_p_47:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #672]
+br x16
+.word 2440
+_p_48_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm:
+	.globl _p_48_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm
+.private_extern _p_48_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_AddWithResize_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration:
+_p_48:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #680]
+br x16
+.word 2445
+_p_49_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string_llvm:
+	.globl _p_49_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string_llvm
+.private_extern _p_49_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerInformation__ctor_Microsoft_Extensions_Logging_ILoggerProvider_string:
+_p_49:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #688]
+br x16
+.word 2461
+_p_50_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRange_IndexMustBeLessException_llvm:
+	.globl _p_50_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRange_IndexMustBeLessException_llvm
+.private_extern _p_50_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRange_IndexMustBeLessException_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRange_IndexMustBeLessException
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRange_IndexMustBeLessException:
+_p_50:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #696]
+br x16
+.word 2463
+_p_51_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool__llvm:
+	.globl _p_51_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool__llvm
+.private_extern _p_51_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool__llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_Select_Microsoft_Extensions_Logging_LoggerFilterOptions_System_Type_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel__System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_:
+_p_51:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #704]
+br x16
+.word 2468
+_p_52_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_llvm:
+	.globl _p_52_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_llvm
+.private_extern _p_52_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger__ctor_Microsoft_Extensions_Logging_ILogger_string_string_System_Nullable_1_Microsoft_Extensions_Logging_LogLevel_System_Func_4_string_string_Microsoft_Extensions_Logging_LogLevel_bool:
+_p_52:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #712]
+br x16
+.word 2470
+_p_53_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger_llvm:
+	.globl _p_53_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger_llvm
+.private_extern _p_53_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_AddWithResize_Microsoft_Extensions_Logging_MessageLogger:
+_p_53:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #720]
+br x16
+.word 2472
+_p_54_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger_llvm:
+	.globl _p_54_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger_llvm
+.private_extern _p_54_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_AddWithResize_Microsoft_Extensions_Logging_ScopeLogger:
+_p_54:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #728]
+br x16
+.word 2488
+_p_55_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray_llvm:
+	.globl _p_55_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray_llvm
+.private_extern _p_55_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_ToArray:
+_p_55:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #736]
+br x16
+.word 2504
+_p_56_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray_llvm:
+	.globl _p_56_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray_llvm
+.private_extern _p_56_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_ToArray:
+_p_56:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #744]
+br x16
+.word 2515
+_p_57_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type_llvm:
+	.globl _p_57_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type_llvm
+.private_extern _p_57_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_ProviderAliasUtilities_GetAlias_System_Type:
+_p_57:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #752]
+br x16
+.word 2526
+_p_58_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFilterRule_GetEnumerator_llvm:
+	.globl _p_58_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFilterRule_GetEnumerator_llvm
+.private_extern _p_58_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFilterRule_GetEnumerator_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFilterRule_GetEnumerator
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFilterRule_GetEnumerator:
+_p_58:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #760]
+br x16
+.word 2528
+_p_59_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter_llvm:
+	.globl _p_59_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter_llvm
+.private_extern _p_59_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_Filter:
+_p_59:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #768]
+br x16
+.word 2539
+_p_60_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel_llvm:
+	.globl _p_60_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel_llvm
+.private_extern _p_60_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_LogLevel:
+_p_60:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #776]
+br x16
+.word 2541
+_p_61_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFilterRule_MoveNext_llvm:
+	.globl _p_61_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFilterRule_MoveNext_llvm
+.private_extern _p_61_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFilterRule_MoveNext_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFilterRule_MoveNext
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFilterRule_MoveNext:
+_p_61:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #784]
+br x16
+.word 2543
+_p_62_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string_llvm:
+	.globl _p_62_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string_llvm
+.private_extern _p_62_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerRuleSelector_IsBetter_Microsoft_Extensions_Logging_LoggerFilterRule_Microsoft_Extensions_Logging_LoggerFilterRule_string_string:
+_p_62:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #792]
+br x16
+.word 2554
+_p_63_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName_llvm:
+	.globl _p_63_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName_llvm
+.private_extern _p_63_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_ProviderName:
+_p_63:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #800]
+br x16
+.word 2556
+_p_64_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName_llvm:
+	.globl _p_64_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName_llvm
+.private_extern _p_64_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_LoggerFilterRule_get_CategoryName:
+_p_64:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #808]
+br x16
+.word 2558
+_p_65_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int16_System_SpanHelpers_DontNegate_1_int16_int16__int16_int_llvm:
+	.globl _p_65_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int16_System_SpanHelpers_DontNegate_1_int16_int16__int16_int_llvm
+.private_extern _p_65_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int16_System_SpanHelpers_DontNegate_1_int16_int16__int16_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int16_System_SpanHelpers_DontNegate_1_int16_int16__int16_int
+plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int16_System_SpanHelpers_DontNegate_1_int16_int16__int16_int:
+_p_65:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #816]
+br x16
+.word 2580
+_p_66_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_StartsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm:
+	.globl _p_66_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_StartsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm
+.private_extern _p_66_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_StartsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_MemoryExtensions_StartsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison
+plt_Microsoft_Extensions_Logging_System_MemoryExtensions_StartsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison:
+_p_66:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #824]
+br x16
+.word 2596
+_p_67_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_EndsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm:
+	.globl _p_67_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_EndsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm
+.private_extern _p_67_plt_Microsoft_Extensions_Logging_System_MemoryExtensions_EndsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_MemoryExtensions_EndsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison
+plt_Microsoft_Extensions_Logging_System_MemoryExtensions_EndsWith_System_ReadOnlySpan_1_char_System_ReadOnlySpan_1_char_System_StringComparison:
+_p_67:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #832]
+br x16
+.word 2601
+_p_68_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_llvm:
+	.globl _p_68_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_llvm
+.private_extern _p_68_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument:
+_p_68:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #840]
+br x16
+.word 2606
+_p_69_plt_Microsoft_Extensions_Logging_string_IndexOf_char_int_llvm:
+	.globl _p_69_plt_Microsoft_Extensions_Logging_string_IndexOf_char_int_llvm
+.private_extern _p_69_plt_Microsoft_Extensions_Logging_string_IndexOf_char_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_string_IndexOf_char_int
+plt_Microsoft_Extensions_Logging_string_IndexOf_char_int:
+_p_69:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #848]
+br x16
+.word 2611
+_p_70_plt_Microsoft_Extensions_Logging_string_op_Inequality_string_string_llvm:
+	.globl _p_70_plt_Microsoft_Extensions_Logging_string_op_Inequality_string_string_llvm
+.private_extern _p_70_plt_Microsoft_Extensions_Logging_string_op_Inequality_string_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_string_op_Inequality_string_string
+plt_Microsoft_Extensions_Logging_string_op_Inequality_string_string:
+_p_70:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #856]
+br x16
+.word 2616
+_p_71_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_GetCustomAttributes_System_Reflection_MemberInfo_llvm:
+	.globl _p_71_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_GetCustomAttributes_System_Reflection_MemberInfo_llvm
+.private_extern _p_71_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_GetCustomAttributes_System_Reflection_MemberInfo_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_GetCustomAttributes_System_Reflection_MemberInfo
+plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_GetCustomAttributes_System_Reflection_MemberInfo:
+_p_71:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #864]
+br x16
+.word 2621
+_p_72_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_get_AttributeType_llvm:
+	.globl _p_72_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_get_AttributeType_llvm
+.private_extern _p_72_plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_get_AttributeType_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_get_AttributeType
+plt_Microsoft_Extensions_Logging_System_Reflection_CustomAttributeData_get_AttributeType:
+_p_72:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #872]
+br x16
+.word 2626
+_p_73_plt_Microsoft_Extensions_Logging_string_op_Equality_string_string_llvm:
+	.globl _p_73_plt_Microsoft_Extensions_Logging_string_op_Equality_string_string_llvm
+.private_extern _p_73_plt_Microsoft_Extensions_Logging_string_op_Equality_string_string_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_string_op_Equality_string_string
+plt_Microsoft_Extensions_Logging_string_op_Equality_string_string:
+_p_73:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #880]
+br x16
+.word 2631
+_p_74_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_interruption_checkpoint_llvm:
+	.globl _p_74_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_interruption_checkpoint_llvm
+.private_extern _p_74_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_interruption_checkpoint_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_interruption_checkpoint
+plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_interruption_checkpoint:
+_p_74:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #888]
+br x16
+.word 2636
+_p_75_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_rethrow_exception_llvm:
+	.globl _p_75_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_rethrow_exception_llvm
+.private_extern _p_75_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_rethrow_exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_rethrow_exception
+plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_rethrow_exception:
+_p_75:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #896]
+br x16
+.word 2639
+_p_76_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowNotSupportedException_System_ExceptionResource_llvm:
+	.globl _p_76_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowNotSupportedException_System_ExceptionResource_llvm
+.private_extern _p_76_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowNotSupportedException_System_ExceptionResource_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowNotSupportedException_System_ExceptionResource
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowNotSupportedException_System_ExceptionResource:
+_p_76:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #904]
+br x16
+.word 2641
+_p_77_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm:
+	.globl _p_77_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm
+.private_extern _p_77_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int:
+_p_77:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #912]
+br x16
+.word 2646
+_p_78_plt_Microsoft_Extensions_Logging_System_Array_GetLowerBound_int_llvm:
+	.globl _p_78_plt_Microsoft_Extensions_Logging_System_Array_GetLowerBound_int_llvm
+.private_extern _p_78_plt_Microsoft_Extensions_Logging_System_Array_GetLowerBound_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_GetLowerBound_int
+plt_Microsoft_Extensions_Logging_System_Array_GetLowerBound_int:
+_p_78:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #920]
+br x16
+.word 2660
+_p_79_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_int_System_Array_int_int_llvm:
+	.globl _p_79_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_int_System_Array_int_int_llvm
+.private_extern _p_79_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_int_System_Array_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_int_System_Array_int_int
+plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_int_System_Array_int_int:
+_p_79:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #928]
+br x16
+.word 2665
+_p_80_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm:
+	.globl _p_80_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm
+.private_extern _p_80_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_MessageLogger_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int:
+_p_80:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #936]
+br x16
+.word 2670
+_p_81_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm:
+	.globl _p_81_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm
+.private_extern _p_81_plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+plt_Microsoft_Extensions_Logging_System_Array_IndexOf_Microsoft_Extensions_Logging_ScopeLogger_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int:
+_p_81:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #944]
+br x16
+.word 2684
+_p_82_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare_llvm:
+	.globl _p_82_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare_llvm
+.private_extern _p_82_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNextRare:
+_p_82:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #952]
+br x16
+.word 2698
+_p_83_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion_llvm:
+	.globl _p_83_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion_llvm
+.private_extern _p_83_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumFailedVersion:
+_p_83:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #960]
+br x16
+.word 2714
+_p_84_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen_llvm:
+	.globl _p_84_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen_llvm
+.private_extern _p_84_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_InvalidOperation_EnumOpCantHappen:
+_p_84:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #968]
+br x16
+.word 2719
+_p_85_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_force_interruption_checkpoint_noraise_llvm:
+	.globl _p_85_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_force_interruption_checkpoint_noraise_llvm
+.private_extern _p_85_plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_force_interruption_checkpoint_noraise_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_force_interruption_checkpoint_noraise
+plt_Microsoft_Extensions_Logging__jit_icall_mono_thread_force_interruption_checkpoint_noraise:
+_p_85:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #976]
+br x16
+.word 2724
+_p_86_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int_llvm:
+	.globl _p_86_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int_llvm
+.private_extern _p_86_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_Grow_int:
+_p_86:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #984]
+br x16
+.word 2727
+_p_87_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int_llvm:
+	.globl _p_87_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int_llvm
+.private_extern _p_87_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_Grow_int:
+_p_87:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #992]
+br x16
+.word 2743
+_p_88_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_System_Array_int_llvm:
+	.globl _p_88_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_System_Array_int_llvm
+.private_extern _p_88_plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_System_Array_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_System_Array_int
+plt_Microsoft_Extensions_Logging_System_Array_Copy_System_Array_System_Array_int:
+_p_88:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1000]
+br x16
+.word 2759
+_p_89_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int_llvm:
+	.globl _p_89_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int_llvm
+.private_extern _p_89_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_Grow_int:
+_p_89:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1008]
+br x16
+.word 2764
+_p_90_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm:
+	.globl _p_90_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm
+.private_extern _p_90_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration__ctor_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration:
+_p_90:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1016]
+br x16
+.word 2780
+_p_91_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_EnumCurrent_int_llvm:
+	.globl _p_91_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_EnumCurrent_int_llvm
+.private_extern _p_91_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_EnumCurrent_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_EnumCurrent_int
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowInvalidOperationException_EnumCurrent_int:
+_p_91:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1024]
+br x16
+.word 2796
+_p_92_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current_llvm:
+	.globl _p_92_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current_llvm
+.private_extern _p_92_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current
+plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_get_Current:
+_p_92:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1032]
+br x16
+.word 2801
+_p_93_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm:
+	.globl _p_93_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm
+.private_extern _p_93_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_IndexOf_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration___Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_int_int:
+_p_93:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1040]
+br x16
+.word 2814
+_p_94_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer_llvm:
+	.globl _p_94_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer_llvm
+.private_extern _p_94_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_CreateComparer:
+_p_94:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1048]
+br x16
+.word 2828
+_p_95_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_long_System_SpanHelpers_DontNegate_1_long_long__long_int_llvm:
+	.globl _p_95_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_long_System_SpanHelpers_DontNegate_1_long_long__long_int_llvm
+.private_extern _p_95_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_long_System_SpanHelpers_DontNegate_1_long_long__long_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_long_System_SpanHelpers_DontNegate_1_long_long__long_int
+plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_long_System_SpanHelpers_DontNegate_1_long_long__long_int:
+_p_95:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1056]
+br x16
+.word 2862
+_p_96_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int_System_SpanHelpers_DontNegate_1_int_int__int_int_llvm:
+	.globl _p_96_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int_System_SpanHelpers_DontNegate_1_int_int__int_int_llvm
+.private_extern _p_96_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int_System_SpanHelpers_DontNegate_1_int_int__int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int_System_SpanHelpers_DontNegate_1_int_int__int_int
+plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_int_System_SpanHelpers_DontNegate_1_int_int__int_int:
+_p_96:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1064]
+br x16
+.word 2898
+_p_97_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_byte_System_SpanHelpers_DontNegate_1_byte_byte__byte_int_llvm:
+	.globl _p_97_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_byte_System_SpanHelpers_DontNegate_1_byte_byte__byte_int_llvm
+.private_extern _p_97_plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_byte_System_SpanHelpers_DontNegate_1_byte_byte__byte_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_byte_System_SpanHelpers_DontNegate_1_byte_byte__byte_int
+plt_Microsoft_Extensions_Logging_System_SpanHelpers_NonPackedIndexOfValueType_byte_System_SpanHelpers_DontNegate_1_byte_byte__byte_int:
+_p_97:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1072]
+br x16
+.word 2932
+_p_98_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowCountArgumentOutOfRange_ArgumentOutOfRange_Count_llvm:
+	.globl _p_98_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowCountArgumentOutOfRange_ArgumentOutOfRange_Count_llvm
+.private_extern _p_98_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowCountArgumentOutOfRange_ArgumentOutOfRange_Count_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowCountArgumentOutOfRange_ArgumentOutOfRange_Count
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowCountArgumentOutOfRange_ArgumentOutOfRange_Count:
+_p_98:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1080]
+br x16
+.word 2948
+_p_99_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowStartIndexArgumentOutOfRange_ArgumentOutOfRange_IndexMustBeLessOrEqual_llvm:
+	.globl _p_99_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowStartIndexArgumentOutOfRange_ArgumentOutOfRange_IndexMustBeLessOrEqual_llvm
+.private_extern _p_99_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowStartIndexArgumentOutOfRange_ArgumentOutOfRange_IndexMustBeLessOrEqual_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowStartIndexArgumentOutOfRange_ArgumentOutOfRange_IndexMustBeLessOrEqual
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowStartIndexArgumentOutOfRange_ArgumentOutOfRange_IndexMustBeLessOrEqual:
+_p_99:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1088]
+br x16
+.word 2953
+_p_100_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument_llvm:
+	.globl _p_100_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument_llvm
+.private_extern _p_100_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentNullException_System_ExceptionArgument:
+_p_100:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1096]
+br x16
+.word 2958
+_p_101_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current_llvm:
+	.globl _p_101_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current_llvm
+.private_extern _p_101_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current
+plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_MessageLogger_get_Current:
+_p_101:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1104]
+br x16
+.word 2963
+_p_102_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm:
+	.globl _p_102_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm
+.private_extern _p_102_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_IndexOf_Microsoft_Extensions_Logging_MessageLogger___Microsoft_Extensions_Logging_MessageLogger_int_int:
+_p_102:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1112]
+br x16
+.word 2976
+_p_103_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer_llvm:
+	.globl _p_103_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer_llvm
+.private_extern _p_103_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_MessageLogger_CreateComparer:
+_p_103:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1120]
+br x16
+.word 2990
+_p_104_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current_llvm:
+	.globl _p_104_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current_llvm
+.private_extern _p_104_plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current
+plt_Microsoft_Extensions_Logging_System_SZGenericArrayEnumerator_1_Microsoft_Extensions_Logging_ScopeLogger_get_Current:
+_p_104:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1128]
+br x16
+.word 3004
+_p_105_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm:
+	.globl _p_105_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm
+.private_extern _p_105_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_IndexOf_Microsoft_Extensions_Logging_ScopeLogger___Microsoft_Extensions_Logging_ScopeLogger_int_int:
+_p_105:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1136]
+br x16
+.word 3017
+_p_106_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer_llvm:
+	.globl _p_106_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer_llvm
+.private_extern _p_106_plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_EqualityComparer_1_Microsoft_Extensions_Logging_ScopeLogger_CreateComparer:
+_p_106:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1144]
+br x16
+.word 3031
+_p_107_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int_llvm:
+	.globl _p_107_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int_llvm
+.private_extern _p_107_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_set_Capacity_int:
+_p_107:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1152]
+br x16
+.word 3045
+_p_108_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int_llvm:
+	.globl _p_108_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int_llvm
+.private_extern _p_108_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_ScopeLogger_set_Capacity_int:
+_p_108:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1160]
+br x16
+.word 3061
+_p_109_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int_llvm:
+	.globl _p_109_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int_llvm
+.private_extern _p_109_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_MessageLogger_set_Capacity_int:
+_p_109:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1168]
+br x16
+.word 3077
+_p_110_plt_Microsoft_Extensions_Logging_System_Type_op_Equality_System_Type_System_Type_llvm:
+	.globl _p_110_plt_Microsoft_Extensions_Logging_System_Type_op_Equality_System_Type_System_Type_llvm
+.private_extern _p_110_plt_Microsoft_Extensions_Logging_System_Type_op_Equality_System_Type_System_Type_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Type_op_Equality_System_Type_System_Type
+plt_Microsoft_Extensions_Logging_System_Type_op_Equality_System_Type_System_Type:
+_p_110:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1176]
+br x16
+.word 3093
+_p_111_plt_Microsoft_Extensions_Logging_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType_System_RuntimeType_llvm:
+	.globl _p_111_plt_Microsoft_Extensions_Logging_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType_System_RuntimeType_llvm
+.private_extern _p_111_plt_Microsoft_Extensions_Logging_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType_System_RuntimeType_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType_System_RuntimeType
+plt_Microsoft_Extensions_Logging_System_RuntimeType_CreateInstanceForAnotherGenericParameter_System_Type_System_RuntimeType_System_RuntimeType:
+_p_111:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1184]
+br x16
+.word 3098
+_p_112_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource_llvm:
+	.globl _p_112_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource_llvm
+.private_extern _p_112_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentException_System_ExceptionResource:
+_p_112:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1192]
+br x16
+.word 3103
+_p_113_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource_llvm:
+	.globl _p_113_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource_llvm
+.private_extern _p_113_plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource
+plt_Microsoft_Extensions_Logging_System_ThrowHelper_ThrowArgumentOutOfRangeException_System_ExceptionArgument_System_ExceptionResource:
+_p_113:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1200]
+br x16
+.word 3108
+_p_114_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_GetEnumerator_llvm:
+	.globl _p_114_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_GetEnumerator_llvm
+.private_extern _p_114_plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_GetEnumerator_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_GetEnumerator
+plt_Microsoft_Extensions_Logging_System_Collections_Concurrent_ConcurrentDictionary_2_string_Microsoft_Extensions_Logging_Logger_GetEnumerator:
+_p_114:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1208]
+br x16
+.word 3113
+_p_115_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator_llvm:
+	.globl _p_115_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator_llvm
+.private_extern _p_115_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_GetEnumerator:
+_p_115:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1216]
+br x16
+.word 3124
+_p_116_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext_llvm:
+	.globl _p_116_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext_llvm
+.private_extern _p_116_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_Enumerator_Microsoft_Extensions_Logging_LoggerFactory_ProviderRegistration_MoveNext:
+_p_116:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1224]
+br x16
+.word 3135
+_p_117_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers_llvm:
+	.globl _p_117_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers_llvm
+.private_extern _p_117_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_Logger_get_MessageLoggers:
+_p_117:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1232]
+br x16
+.word 3146
+_p_118_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger_llvm:
+	.globl _p_118_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger_llvm
+.private_extern _p_118_plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger
+plt_Microsoft_Extensions_Logging_Microsoft_Extensions_Logging_MessageLogger_get_Logger:
+_p_118:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1240]
+br x16
+.word 3148
+_p_119_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_corlib_exception_llvm:
+	.globl _p_119_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_corlib_exception_llvm
+.private_extern _p_119_plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_corlib_exception_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_corlib_exception
+plt_Microsoft_Extensions_Logging__jit_icall_mono_arch_throw_corlib_exception:
+_p_119:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1248]
+br x16
+.word 3150
+_p_120_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception__ctor_llvm:
+	.globl _p_120_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception__ctor_llvm
+.private_extern _p_120_plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception__ctor_llvm
+	.no_dead_strip plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception__ctor
+plt_Microsoft_Extensions_Logging_System_Collections_Generic_List_1_System_Exception__ctor:
+_p_120:
+adrp x16, mono_aot_Microsoft_Extensions_Logging_got@PAGE+0
+add x16, x16, mono_aot_Microsoft_Extensions_Logging_got@PAGEOFF
+ldr x16, [x16, #1256]
+br x16
+.word 3152
+plt_end:
+_mono_aot_Microsoft_Extensions_Loggingplt_end:
+	.globl _mono_aot_Microsoft_Extensions_Loggingplt_end
+.section __DATA, __bss
+	.align 3
+jit_got:
+_mono_aot_Microsoft_Extensions_Loggingjit_got:
+	.globl _mono_aot_Microsoft_Extensions_Loggingjit_got
+.lcomm mono_aot_Microsoft_Extensions_Logging_got, 1264
+got_end:
+.section __TEXT, __const
+	.align 3
+Lglobals_hash:
+
+	.short 11, 0, 0, 0, 0, 0, 0, 0
+	.short 0, 0, 0, 0, 0, 1, 0, 0
+	.short 0, 0, 0, 0, 0, 0, 0
+.section __TEXT, __const
+	.align 2
+name_0:
+	.asciz "_unbox_trampoline_p"
+.data
+	.align 3
+globals:
+_mono_aot_Microsoft_Extensions_Loggingglobals:
+	.globl _mono_aot_Microsoft_Extensions_Loggingglobals
+	.align 3
+	.quad Lglobals_hash
+	.align 3
+	.quad name_0
+	.align 3
+	.quad _unbox_trampoline_p
+
+	.long 0,0
+.section __DWARF, __debug_info,regular,debug
+LTDIE_1:
+
+	.byte 17
+	.asciz "System_Object"
+
+	.byte 16,7
+	.asciz "System_Object"
+
+LDIFF_SYM4=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM4
+LTDIE_1_POINTER:
+
+	.byte 13
+LDIFF_SYM5=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM5
+LTDIE_1_REFERENCE:
+
+	.byte 14
+LDIFF_SYM6=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM6
+LTDIE_3:
+
+	.byte 5
+	.asciz "System_ValueType"
+
+	.byte 16,16
+LDIFF_SYM7=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM7
+	.byte 2,35,0,0,7
+	.asciz "System_ValueType"
+
+LDIFF_SYM8=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM8
+LTDIE_3_POINTER:
+
+	.byte 13
+LDIFF_SYM9=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM9
+LTDIE_3_REFERENCE:
+
+	.byte 14
+LDIFF_SYM10=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM10
+LTDIE_2:
+
+	.byte 5
+	.asciz "System_Boolean"
+
+	.byte 17,16
+LDIFF_SYM11=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM11
+	.byte 2,35,0,6
+	.asciz "m_value"
+
+LDIFF_SYM12=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM12
+	.byte 2,35,16,0,7
+	.asciz "System_Boolean"
+
+LDIFF_SYM13=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM13
+LTDIE_2_POINTER:
+
+	.byte 13
+LDIFF_SYM14=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM14
+LTDIE_2_REFERENCE:
+
+	.byte 14
+LDIFF_SYM15=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM15
+LTDIE_4:
+
+	.byte 17
+	.asciz "System_IDisposable"
+
+	.byte 16,7
+	.asciz "System_IDisposable"
+
+LDIFF_SYM16=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM16
+LTDIE_4_POINTER:
+
+	.byte 13
+LDIFF_SYM17=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM17
+LTDIE_4_REFERENCE:
+
+	.byte 14
+LDIFF_SYM18=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM18
+LTDIE_6:
+
+	.byte 8
+	.asciz "Microsoft_Extensions_Logging_LogLevel"
+
+	.byte 4
+LDIFF_SYM19=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM19
+	.byte 9
+	.asciz "Trace"
+
+	.byte 0,9
+	.asciz "Debug"
+
+	.byte 1,9
+	.asciz "Information"
+
+	.byte 2,9
+	.asciz "Warning"
+
+	.byte 3,9
+	.asciz "Error"
+
+	.byte 4,9
+	.asciz "Critical"
+
+	.byte 5,9
+	.asciz "None"
+
+	.byte 6,0,7
+	.asciz "Microsoft_Extensions_Logging_LogLevel"
+
+LDIFF_SYM20=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM20
+LTDIE_6_POINTER:
+
+	.byte 13
+LDIFF_SYM21=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM21
+LTDIE_6_REFERENCE:
+
+	.byte 14
+LDIFF_SYM22=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM22
+LTDIE_5:
+
+	.byte 5
+	.asciz "Microsoft_Extensions_Logging_LoggerFilterOptions"
+
+	.byte 32,16
+LDIFF_SYM23=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM23
+	.byte 2,35,0,6
+	.asciz "<CaptureScopes>k__BackingField"
+
+LDIFF_SYM24=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM24
+	.byte 2,35,24,6
+	.asciz "<MinLevel>k__BackingField"
+
+LDIFF_SYM25=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM25
+	.byte 2,35,28,6
+	.asciz "<RulesInternal>k__BackingField"
+
+LDIFF_SYM26=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM26
+	.byte 2,35,16,0,7
+	.asciz "Microsoft_Extensions_Logging_LoggerFilterOptions"
+
+LDIFF_SYM27=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM27
+LTDIE_5_POINTER:
+
+	.byte 13
+LDIFF_SYM28=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM28
+LTDIE_5_REFERENCE:
+
+	.byte 14
+LDIFF_SYM29=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM29
+LTDIE_7:
+
+	.byte 17
+	.asciz "Microsoft_Extensions_Logging_IExternalScopeProvider"
+
+	.byte 16,7
+	.asciz "Microsoft_Extensions_Logging_IExternalScopeProvider"
+
+LDIFF_SYM30=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM30
+LTDIE_7_POINTER:
+
+	.byte 13
+LDIFF_SYM31=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM31
+LTDIE_7_REFERENCE:
+
+	.byte 14
+LDIFF_SYM32=LTDIE_7 - Ldebug_info_start
+	.long LDIFF_SYM32
+LTDIE_9:
+
+	.byte 8
+	.asciz "Microsoft_Extensions_Logging_ActivityTrackingOptions"
+
+	.byte 4
+LDIFF_SYM33=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM33
+	.byte 9
+	.asciz "None"
+
+	.byte 0,9
+	.asciz "SpanId"
+
+	.byte 1,9
+	.asciz "TraceId"
+
+	.byte 2,9
+	.asciz "ParentId"
+
+	.byte 4,9
+	.asciz "TraceState"
+
+	.byte 8,9
+	.asciz "TraceFlags"
+
+	.byte 16,9
+	.asciz "Tags"
+
+	.byte 32,9
+	.asciz "Baggage"
+
+	.byte 192,0,0,7
+	.asciz "Microsoft_Extensions_Logging_ActivityTrackingOptions"
+
+LDIFF_SYM34=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM34
+LTDIE_9_POINTER:
+
+	.byte 13
+LDIFF_SYM35=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM35
+LTDIE_9_REFERENCE:
+
+	.byte 14
+LDIFF_SYM36=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM36
+LTDIE_8:
+
+	.byte 5
+	.asciz "Microsoft_Extensions_Logging_LoggerFactoryOptions"
+
+	.byte 20,16
+LDIFF_SYM37=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM37
+	.byte 2,35,0,6
+	.asciz "<ActivityTrackingOptions>k__BackingField"
+
+LDIFF_SYM38=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM38
+	.byte 2,35,16,0,7
+	.asciz "Microsoft_Extensions_Logging_LoggerFactoryOptions"
+
+LDIFF_SYM39=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM39
+LTDIE_8_POINTER:
+
+	.byte 13
+LDIFF_SYM40=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM40
+LTDIE_8_REFERENCE:
+
+	.byte 14
+LDIFF_SYM41=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM41
+LTDIE_0:
+
+	.byte 5
+	.asciz "Microsoft_Extensions_Logging_LoggerFactory"
+
+	.byte 80,16
+LDIFF_SYM42=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM42
+	.byte 2,35,0,6
+	.asciz "_loggers"
+
+LDIFF_SYM43=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM43
+	.byte 2,35,16,6
+	.asciz "_providerRegistrations"
+
+LDIFF_SYM44=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM44
+	.byte 2,35,24,6
+	.asciz "_sync"
+
+LDIFF_SYM45=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM45
+	.byte 2,35,32,6
+	.asciz "_disposed"
+
+LDIFF_SYM46=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM46
+	.byte 2,35,72,6
+	.asciz "_changeTokenRegistration"
+
+LDIFF_SYM47=LTDIE_4_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM47
+	.byte 2,35,40,6
+	.asciz "_filterOptions"
+
+LDIFF_SYM48=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM48
+	.byte 2,35,48,6
+	.asciz "_scopeProvider"
+
+LDIFF_SYM49=LTDIE_7_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM49
+	.byte 2,35,56,6
+	.asciz "_factoryOptions"
+
+LDIFF_SYM50=LTDIE_8_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM50
+	.byte 2,35,64,0,7
+	.asciz "Microsoft_Extensions_Logging_LoggerFactory"
+
+LDIFF_SYM51=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM51
+LTDIE_0_POINTER:
+
+	.byte 13
+LDIFF_SYM52=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM52
+LTDIE_0_REFERENCE:
+
+	.byte 14
+LDIFF_SYM53=LTDIE_0 - Ldebug_info_start
+	.long LDIFF_SYM53
+LTDIE_10:
+
+	.byte 5
+	.asciz "Microsoft_Extensions_Logging_Logger"
+
+	.byte 48,16
+LDIFF_SYM54=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM54
+	.byte 2,35,0,6
+	.asciz "_categoryName"
+
+LDIFF_SYM55=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM55
+	.byte 2,35,16,6
+	.asciz "<Loggers>k__BackingField"
+
+LDIFF_SYM56=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM56
+	.byte 2,35,24,6
+	.asciz "<MessageLoggers>k__BackingField"
+
+LDIFF_SYM57=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM57
+	.byte 2,35,32,6
+	.asciz "<ScopeLoggers>k__BackingField"
+
+LDIFF_SYM58=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM58
+	.byte 2,35,40,0,7
+	.asciz "Microsoft_Extensions_Logging_Logger"
+
+LDIFF_SYM59=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM59
+LTDIE_10_POINTER:
+
+	.byte 13
+LDIFF_SYM60=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM60
+LTDIE_10_REFERENCE:
+
+	.byte 14
+LDIFF_SYM61=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM61
+	.byte 2
+	.asciz "Microsoft.Extensions.Logging.LoggerFactory:RefreshFilters"
+	.asciz "Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions"
+
+	.byte 0,0
+	.quad Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+	.quad Lme_1a
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM62=LTDIE_0_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM62
+	.byte 1,105,3
+	.asciz "filterOptions"
+
+LDIFF_SYM63=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM63
+	.byte 1,106,11
+	.asciz "V_0"
+
+LDIFF_SYM64=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM64
+	.byte 3,141,200,0,11
+	.asciz "V_1"
+
+LDIFF_SYM65=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM65
+	.byte 3,141,208,0,11
+	.asciz "V_2"
+
+LDIFF_SYM66=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM66
+	.byte 3,141,216,0,11
+	.asciz "V_3"
+
+LDIFF_SYM67=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM67
+	.byte 2,141,56,11
+	.asciz "V_4"
+
+LDIFF_SYM68=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM68
+	.byte 1,106,11
+	.asciz "V_5"
+
+LDIFF_SYM69=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM69
+	.byte 1,104,11
+	.asciz "V_6"
+
+LDIFF_SYM70=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM70
+	.byte 2,141,40,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM71=Lfde0_end - Lfde0_start
+	.long LDIFF_SYM71
+Lfde0_start:
+
+	.long 0
+	.align 3
+	.quad Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+
+LDIFF_SYM72=Lme_1a - Microsoft_Extensions_Logging_LoggerFactory_RefreshFilters_Microsoft_Extensions_Logging_LoggerFilterOptions
+	.long LDIFF_SYM72
+	.long 0
+	.byte 12,31,0,68,14,192,1,157,24,158,23,68,13,29,68,152,22,153,21,68,154,20
+	.align 3
+Lfde0_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "Microsoft.Extensions.Logging.LoggerFactory:Dispose"
+	.asciz "Microsoft_Extensions_Logging_LoggerFactory_Dispose"
+
+	.byte 0,0
+	.quad Microsoft_Extensions_Logging_LoggerFactory_Dispose
+	.quad Lme_20
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM73=LTDIE_0_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM73
+	.byte 1,106,11
+	.asciz "V_0"
+
+LDIFF_SYM74=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM74
+	.byte 3,141,192,0,11
+	.asciz "V_1"
+
+LDIFF_SYM75=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM75
+	.byte 2,141,48,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM76=Lfde1_end - Lfde1_start
+	.long LDIFF_SYM76
+Lfde1_start:
+
+	.long 0
+	.align 3
+	.quad Microsoft_Extensions_Logging_LoggerFactory_Dispose
+
+LDIFF_SYM77=Lme_20 - Microsoft_Extensions_Logging_LoggerFactory_Dispose
+	.long LDIFF_SYM77
+	.long 0
+	.byte 12,31,0,68,14,192,1,157,24,158,23,68,13,29,68,153,22,154,21
+	.align 3
+Lfde1_end:
+
+.section __DWARF, __debug_info,regular,debug
+LTDIE_12:
+
+	.byte 17
+	.asciz "System_Collections_IDictionary"
+
+	.byte 16,7
+	.asciz "System_Collections_IDictionary"
+
+LDIFF_SYM78=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM78
+LTDIE_12_POINTER:
+
+	.byte 13
+LDIFF_SYM79=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM79
+LTDIE_12_REFERENCE:
+
+	.byte 14
+LDIFF_SYM80=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM80
+LTDIE_13:
+
+	.byte 5
+	.asciz "System_Int32"
+
+	.byte 20,16
+LDIFF_SYM81=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM81
+	.byte 2,35,0,6
+	.asciz "m_value"
+
+LDIFF_SYM82=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM82
+	.byte 2,35,16,0,7
+	.asciz "System_Int32"
+
+LDIFF_SYM83=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM83
+LTDIE_13_POINTER:
+
+	.byte 13
+LDIFF_SYM84=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM84
+LTDIE_13_REFERENCE:
+
+	.byte 14
+LDIFF_SYM85=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM85
+LTDIE_11:
+
+	.byte 5
+	.asciz "System_Exception"
+
+	.byte 144,1,16
+LDIFF_SYM86=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM86
+	.byte 2,35,0,6
+	.asciz "_unused1"
+
+LDIFF_SYM87=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM87
+	.byte 2,35,16,6
+	.asciz "_message"
+
+LDIFF_SYM88=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM88
+	.byte 2,35,24,6
+	.asciz "_data"
+
+LDIFF_SYM89=LTDIE_12_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM89
+	.byte 2,35,32,6
+	.asciz "_innerException"
+
+LDIFF_SYM90=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM90
+	.byte 2,35,40,6
+	.asciz "_helpURL"
+
+LDIFF_SYM91=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM91
+	.byte 2,35,48,6
+	.asciz "_traceIPs"
+
+LDIFF_SYM92=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM92
+	.byte 2,35,56,6
+	.asciz "_stackTraceString"
+
+LDIFF_SYM93=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM93
+	.byte 2,35,64,6
+	.asciz "_remoteStackTraceString"
+
+LDIFF_SYM94=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM94
+	.byte 2,35,72,6
+	.asciz "_unused4"
+
+LDIFF_SYM95=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM95
+	.byte 2,35,80,6
+	.asciz "_dynamicMethods"
+
+LDIFF_SYM96=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM96
+	.byte 2,35,88,6
+	.asciz "_HResult"
+
+LDIFF_SYM97=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM97
+	.byte 2,35,96,6
+	.asciz "_source"
+
+LDIFF_SYM98=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM98
+	.byte 2,35,104,6
+	.asciz "_unused6"
+
+LDIFF_SYM99=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM99
+	.byte 2,35,112,6
+	.asciz "foreignExceptionsFrames"
+
+LDIFF_SYM100=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM100
+	.byte 2,35,120,6
+	.asciz "native_trace_ips"
+
+LDIFF_SYM101=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM101
+	.byte 3,35,128,1,6
+	.asciz "caught_in_unmanaged"
+
+LDIFF_SYM102=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM102
+	.byte 3,35,136,1,0,7
+	.asciz "System_Exception"
+
+LDIFF_SYM103=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM103
+LTDIE_11_POINTER:
+
+	.byte 13
+LDIFF_SYM104=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM104
+LTDIE_11_REFERENCE:
+
+	.byte 14
+LDIFF_SYM105=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM105
+LTDIE_15:
+
+	.byte 17
+	.asciz "Microsoft_Extensions_Logging_ILogger"
+
+	.byte 16,7
+	.asciz "Microsoft_Extensions_Logging_ILogger"
+
+LDIFF_SYM106=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM106
+LTDIE_15_POINTER:
+
+	.byte 13
+LDIFF_SYM107=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM107
+LTDIE_15_REFERENCE:
+
+	.byte 14
+LDIFF_SYM108=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM108
+LTDIE_14:
+
+	.byte 5
+	.asciz "Microsoft_Extensions_Logging_MessageLogger"
+
+	.byte 56,16
+LDIFF_SYM109=LTDIE_3 - Ldebug_info_start
+	.long LDIFF_SYM109
+	.byte 2,35,0,6
+	.asciz "<Logger>k__BackingField"
+
+LDIFF_SYM110=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM110
+	.byte 2,35,0,6
+	.asciz "<Category>k__BackingField"
+
+LDIFF_SYM111=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM111
+	.byte 2,35,8,6
+	.asciz "<ProviderTypeFullName>k__BackingField"
+
+LDIFF_SYM112=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM112
+	.byte 2,35,16,6
+	.asciz "<MinLevel>k__BackingField"
+
+LDIFF_SYM113=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM113
+	.byte 2,35,24,6
+	.asciz "<Filter>k__BackingField"
+
+LDIFF_SYM114=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM114
+	.byte 2,35,32,0,7
+	.asciz "Microsoft_Extensions_Logging_MessageLogger"
+
+LDIFF_SYM115=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM115
+LTDIE_14_POINTER:
+
+	.byte 13
+LDIFF_SYM116=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM116
+LTDIE_14_REFERENCE:
+
+	.byte 14
+LDIFF_SYM117=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM117
+	.byte 2
+	.asciz "Microsoft.Extensions.Logging.Logger:Log<TState_GSHAREDVT>"
+	.asciz "Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string"
+
+	.byte 0,0
+	.quad Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string
+	.quad Lme_43
+
+	.byte 2,118,16,3
+	.asciz "this"
+
+LDIFF_SYM118=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM118
+	.byte 1,103,3
+	.asciz "param0"
+
+LDIFF_SYM119=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM119
+	.byte 1,104,3
+	.asciz "param1"
+
+LDIFF_SYM120=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM120
+	.byte 3,141,208,0,3
+	.asciz "param2"
+
+LDIFF_SYM121=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM121
+	.byte 1,80,3
+	.asciz "param3"
+
+LDIFF_SYM122=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM122
+	.byte 1,105,3
+	.asciz "param4"
+
+LDIFF_SYM123=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM123
+	.byte 1,106,11
+	.asciz "V_0"
+
+LDIFF_SYM124=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM124
+	.byte 1,103,11
+	.asciz "V_1"
+
+LDIFF_SYM125=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM125
+	.byte 3,141,240,0,11
+	.asciz "V_2"
+
+LDIFF_SYM126=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM126
+	.byte 1,100,11
+	.asciz "V_3"
+
+LDIFF_SYM127=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM127
+	.byte 1,99,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM128=Lfde2_end - Lfde2_start
+	.long LDIFF_SYM128
+Lfde2_start:
+
+	.long 0
+	.align 3
+	.quad Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string
+
+LDIFF_SYM129=Lme_43 - Microsoft_Extensions_Logging_Logger_Log_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_TState_GSHAREDVT_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string
+	.long LDIFF_SYM129
+	.long 0
+	.byte 12,31,0,68,14,128,1,157,16,158,15,68,13,29,68,147,14,148,13,68,149,12,150,11,68,151,10,152,9,68,153,8
+	.byte 154,7
+	.align 3
+Lfde2_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 2
+	.asciz "Microsoft.Extensions.Logging.Logger:<Log>g__LoggerLog_14_0<TState_GSHAREDVT>"
+	.asciz "Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_"
+
+	.byte 0,0
+	.quad Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_
+	.quad Lme_44
+
+	.byte 2,118,16,3
+	.asciz "param0"
+
+LDIFF_SYM130=LTDIE_6 - Ldebug_info_start
+	.long LDIFF_SYM130
+	.byte 2,141,32,3
+	.asciz "param1"
+
+LDIFF_SYM131=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM131
+	.byte 2,141,40,3
+	.asciz "param2"
+
+LDIFF_SYM132=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM132
+	.byte 2,141,56,3
+	.asciz "param3"
+
+LDIFF_SYM133=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM133
+	.byte 3,141,192,0,3
+	.asciz "param4"
+
+LDIFF_SYM134=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM134
+	.byte 3,141,200,0,3
+	.asciz "param5"
+
+LDIFF_SYM135=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM135
+	.byte 3,141,208,0,3
+	.asciz "param6"
+
+LDIFF_SYM136=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM136
+	.byte 3,141,216,0,11
+	.asciz "V_0"
+
+LDIFF_SYM137=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM137
+	.byte 3,141,232,0,0
+
+.section __DWARF, __debug_frame,regular,debug
+
+LDIFF_SYM138=Lfde3_end - Lfde3_start
+	.long LDIFF_SYM138
+Lfde3_start:
+
+	.long 0
+	.align 3
+	.quad Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_
+
+LDIFF_SYM139=Lme_44 - Microsoft_Extensions_Logging_Logger__Logg__LoggerLog_14_0_TState_GSHAREDVT_Microsoft_Extensions_Logging_LogLevel_Microsoft_Extensions_Logging_EventId_Microsoft_Extensions_Logging_ILogger_System_Exception_System_Func_3_TState_GSHAREDVT_System_Exception_string_System_Collections_Generic_List_1_System_Exception__TState_GSHAREDVT_
+	.long LDIFF_SYM139
+	.long 0
+	.byte 12,31,0,68,14,160,1,157,20,158,19,68,13,29,68,148,18,149,17
+	.align 3
+Lfde3_end:
+
+.section __DWARF, __debug_info,regular,debug
+
+	.byte 0
+Ldebug_info_end:
+.text
+	.align 3
+mem_end:
