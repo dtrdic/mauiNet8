@@ -54,13 +54,10 @@ workflows:
 
             $DOTNET publish MauiNet8.csproj -f net8.0-ios \
               -c Release \
-              -p:BuildIpa=True \
-              -p:ApplicationDisplayVersion="1.26.0" \
-              -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
               -p:RuntimeIdentifier=ios-arm64 \
+              -p:BuildIpa=True \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
-              -p:AndroidEnable=false \
               -o ../artifacts
     artifacts:
         - $CM_BUILD_DIR/bin/Release/net8.0-ios/ios-arm64/*.app.dSYM
