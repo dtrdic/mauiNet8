@@ -55,7 +55,7 @@ workflows:
 
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
 
-            $DOTNET publish -f net8.0-ios \
+            $DOTNET publish -f net8.0-ios -p:BuildAndroid=false \
               -c Release \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.26.0" \
@@ -63,6 +63,7 @@ workflows:
               -p:RuntimeIdentifier=ios-arm64 \
               -p:CodesignKey="\"$CERT_NAME\"" \
               -p:CodesignProvision="\"$PROFILE_NAME\"" \
+              --p:BuildAndroid=false \
               -o ../artifacts
           
     artifacts:
