@@ -118,6 +118,7 @@ workflows:
 
           $DOTNET publish MauiNet8.csproj -f net8.0-android \
             -c Release \
+            -p:AndroidDebugSymbolLevel=Full \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
             -p:AndroidSigningKeyAlias=$CM_KEY_ALIAS \

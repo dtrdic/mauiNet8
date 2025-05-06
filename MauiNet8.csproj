@@ -19,6 +19,8 @@
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AndroidDebugSymbolLevel>Full</AndroidDebugSymbolLevel>
+
 
 		<!-- Display name -->
 		<ApplicationTitle>MauiNet8</ApplicationTitle>
