@@ -2,7 +2,7 @@ workflows:
   maui-ios:
     name: MAUI ios
     max_build_duration: 120
-    instance_type: mac_mini_m1
+    instance_type: mac_mini_m2
     triggering:
       events:
         - push
@@ -23,12 +23,18 @@ workflows:
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
             ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
-        - name: Install MAUI
-          script: | 
-            $DOTNET nuget locals all --clear 
-            $DOTNET workload install ios maui \
-              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-              --source https://api.nuget.org/v3/index.json   
+
+        - name: Install MAUI iOS workload only
+          script: |
+            $DOTNET nuget locals all --clear
+            $DOTNET workload install maui-ios ios
+
+        # - name: Install MAUI workload
+        #   script: | 
+        #     $DOTNET nuget locals all --clear 
+        #     $DOTNET workload install ios maui \
+        #       --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+        #       --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
@@ -50,25 +56,29 @@ workflows:
             PROFILE_NAME=$(find ~/Library/MobileDevice/Provisioning\ Profiles -name "*.mobileprovision" -execdir sh -c '/usr/libexec/PlistBuddy -c "print :Name" /dev/stdin <<< $(security cms -D -i {})' \;)
             
             cd "$(dirname "$(find . -name 'MauiNet8.csproj' | head -n 1)")"
-            $DOTNET restore -r ios-arm64
 
             $DOTNET nuget locals all --clear
-            $DOTNET restore
 
+            $DOTNET restore MauiNet8.csproj \
+              -p:TargetFrameworks=net8.0-ios \
+              -p:RuntimeIdentifier=ios-arm64
 
-            $DOTNET build MauiNet8.csproj -f net8.0-ios --no-restore
-
-            $DOTNET publish -f net8.0-ios --no-restore \
+            $DOTNET publish MauiNet8.csproj \
+              -p:TargetFrameworks=net8.0-ios \
+              -f net8.0-ios \
               -c Release \
+              -r ios-arm64 \
               -p:BuildIpa=True \
               -p:ApplicationDisplayVersion="1.0.0" \
-              -p:ApplicationVersion=$BUILD_NUMBER \
-              -p:RuntimeIdentifier=ios-arm64 \
+              -p:ApplicationVersion=$UPDATED_BUILD_NUMBER \
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
               -o ../artifacts
+
+
+
     artifacts:
-        - ./artifacts/*.ipa
+        - /Users/builder/artifacts/*.ipa
     publishing:
       app_store_connect:
         auth: integration
