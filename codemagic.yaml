@@ -124,7 +124,7 @@ workflows:
           # rm -rf ~/.dotnet/sdk-manifests
           # rm -rf $DOTNET_PATH/packs
           rm -rf ~/.dotnet
-          rm -rf $DOTNET_ROOT
+          rm -rf $DOTNET_PATH
 
       - name: Restore workloads
         script: |
