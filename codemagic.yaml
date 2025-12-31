@@ -2,7 +2,7 @@ workflows:
   maui-ios:
     name: MAUI ios
     max_build_duration: 120
-    instance_type: mac_mini_m1
+    instance_type: mac_mini_m2
     triggering:
       events:
         - push
@@ -23,7 +23,7 @@ workflows:
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
             ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
-        - name: Install MAUI
+        - name: Install MAUI workload
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui \
