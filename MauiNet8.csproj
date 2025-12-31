@@ -31,6 +31,11 @@
       Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
       13.0
     </SupportedOSPlatformVersion>
+
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.416" />
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.416" />
+  </ItemGroup>
 
 </Project>
