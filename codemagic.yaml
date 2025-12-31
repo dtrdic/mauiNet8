@@ -98,7 +98,6 @@ workflows:
       vars:
         CI: "true"
         DOTNET_MULTILEVEL_LOOKUP: "0"
-        DOTNET_ROOT: $CM_BUILD_DIR/dotnet
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
