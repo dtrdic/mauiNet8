@@ -93,7 +93,7 @@ workflows:
       android_signing:
         - davidKeystore
       groups:
-        - google_credentials3
+        - google_play
       vars:
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
@@ -108,15 +108,13 @@ workflows:
       - name: Install MAUI and Android SDK Dependencies
         script: |
           $DOTNET nuget locals all --clear 
-          $DOTNET workload install android maui \
-            --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-            --source https://api.nuget.org/v3/index.json   
+          $DOTNET workload install maui-android android 
 
-      - name: Install Android Dependencies
-        script: | 
-          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
-            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
-            "-p:AcceptAndroidSDKLicenses=true"
+      # - name: Install Android Dependencies
+      #   script: | 
+      #     $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
+      #       "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
+      #       "-p:AcceptAndroidSDKLicenses=true"
 
       - name: Build
         script: | 
@@ -141,7 +139,7 @@ workflows:
       - /Users/builder/clone/artifacts/*Signed.aab
     publishing:
       google_play:
-        credentials: $GCLOUD_SERVICE_ACCOUNT_CREDENTIALS3
+        credentials: $GOOGLE_PLAY_SERVICE_ACCOUNT_CREDENTIALS
         track: internal
         submit_as_draft: true
 
