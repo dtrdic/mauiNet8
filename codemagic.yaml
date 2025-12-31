@@ -112,15 +112,15 @@ workflows:
             --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
             --source https://api.nuget.org/v3/index.json
 
-      - name: Restore workloads
-        script: |
-          $DOTNET workload restore MauiNet8.csproj
+      # - name: Restore workloads
+      #   script: |
+      #     $DOTNET workload restore MauiNet8.csproj
 
-      # - name: Install Android Dependencies
-      #   script: | 
-      #     $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
-      #       "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
-      #       "-p:AcceptAndroidSDKLicenses=true"
+      - name: Install Android Dependencies
+        script: | 
+          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
+            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
+            "-p:AcceptAndroidSDKLicenses=true"
 
       - name: Build
         script: | 
