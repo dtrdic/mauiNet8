@@ -110,11 +110,11 @@ workflows:
           $DOTNET nuget locals all --clear 
           $DOTNET workload install maui-android android 
 
-      # - name: Install Android Dependencies
-      #   script: | 
-      #     $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
-      #       "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
-      #       "-p:AcceptAndroidSDKLicenses=true"
+      - name: Install Android Dependencies
+        script: | 
+          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
+            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
+            "-p:AcceptAndroidSDKLicenses=true"
 
       - name: Build
         script: | 
