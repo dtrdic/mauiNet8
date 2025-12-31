@@ -56,8 +56,8 @@ workflows:
             $DOTNET nuget locals all --clear
 
             $DOTNET restore MauiNet8.csproj \
-              -f net8.0-ios \
-              -r ios-arm64
+              -p:TargetFramework=net8.0-ios \
+              -p:RuntimeIdentifier=ios-arm64
 
             $DOTNET publish MauiNet8.csproj \
               -f net8.0-ios \
@@ -69,6 +69,7 @@ workflows:
               -p:CodesignKey="$CERT_NAME" \
               -p:CodesignProvision="$PROFILE_NAME" \
               -o ../artifacts
+
 
     artifacts:
         - ./artifacts/*.ipa
