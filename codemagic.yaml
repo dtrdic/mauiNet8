@@ -96,6 +96,7 @@ workflows:
       groups:
         - google_play
       vars:
+        CI: "true"
         DOTNET_ROOT: $CM_BUILD_DIR/dotnet
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet

@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <!-- Default: multi-target for local dev -->
-  <PropertyGroup Condition="'$(TargetFramework)' == ''">
-    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+  <!-- CI build: Android ONLY -->
+  <PropertyGroup Condition="'$(CI)' == 'true'">
+    <TargetFramework>net8.0-android</TargetFramework>
   </PropertyGroup>
 
-  <!-- CI / explicit -f build: ONLY build what was requested -->
-  <PropertyGroup Condition="'$(TargetFramework)' != ''">
-    <TargetFramework>$(TargetFramework)</TargetFramework>
+  <!-- Local dev: multi-target -->
+  <PropertyGroup Condition="'$(CI)' != 'true'">
+    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -31,8 +31,8 @@
       Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
       13.0
     </SupportedOSPlatformVersion>
-
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
