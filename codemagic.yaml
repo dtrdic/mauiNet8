@@ -105,6 +105,11 @@ workflows:
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
 
+      - name: Clean Android SDK packs
+        script: |
+          rm -rf $DOTNET_PATH/packs/Microsoft.Android.Sdk.Darwin
+          rm -rf ~/.nuget/packages/microsoft.android.sdk*
+
       - name: Install MAUI
         script: |
           $DOTNET nuget locals all --clear
@@ -112,26 +117,14 @@ workflows:
             --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
             --source https://api.nuget.org/v3/index.json
 
-      # - name: Restore workloads
-      #   script: |
-      #     $DOTNET workload restore MauiNet8.csproj
-
-      - name: Install Android Dependencies
-        script: | 
-          $DOTNET build -t:InstallAndroidDependencies -f net8.0-android \
-            "-p:AndroidSdkDirectory=/usr/local/share/android-sdk" \
-            "-p:AcceptAndroidSDKLicenses=true"
+      - name: Restore workloads
+        script: |
+          $DOTNET workload restore MauiNet8.csproj
 
       - name: Build
-        script: | 
-          LATEST_BUILD_NUMBER=$(google-play get-latest-build-number --package-name "$PACKAGE_NAME")
-          if [ -z $LATEST_BUILD_NUMBER ]; then
-            UPDATED_BUILD_NUMBER=$BUILD_NUMBER
-          else
-            UPDATED_BUILD_NUMBER=$(($LATEST_BUILD_NUMBER + 1))
-          fi
-
-          $DOTNET publish MauiNet8.csproj -f net8.0-android \
+        script: |
+          $DOTNET publish MauiNet8.csproj \
+            -f net8.0-android \
             -c Release \
             -p:AndroidKeyStore=True \
             -p:AndroidSigningKeyStore=$CM_KEYSTORE_PATH \
@@ -141,6 +134,7 @@ workflows:
             -p:ApplicationVersion=$BUILD_NUMBER \
             -p:ApplicationDisplayVersion="1.0.0" \
             -o ../artifacts
+
     artifacts:
       - /Users/builder/clone/artifacts/*Signed.aab
     publishing:
