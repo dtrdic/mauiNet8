@@ -90,7 +90,7 @@ workflows:
     instance_type: mac_mini_m2
 
     environment:
-      flutter: 3.27.4
+   #   flutter: 3.27.4
       android_signing:
         - davidKeystore
       groups:
