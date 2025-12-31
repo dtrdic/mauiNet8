@@ -33,6 +33,11 @@
     </SupportedOSPlatformVersion>
   </PropertyGroup>
 
+	<PropertyGroup>
+		<AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+		<AndroidTargetSdkVersion>34</AndroidTargetSdkVersion>
+	</PropertyGroup>
+
   <PropertyGroup>
      <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
   </PropertyGroup>
