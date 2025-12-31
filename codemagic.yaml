@@ -105,10 +105,16 @@ workflows:
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
 
-      - name: Install MAUI and Android SDK Dependencies
+      - name: Install MAUI
         script: |
-          $DOTNET nuget locals all --clear 
-          $DOTNET workload install maui-android android 
+          $DOTNET nuget locals all --clear
+          $DOTNET workload install maui \
+            --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+            --source https://api.nuget.org/v3/index.json
+
+      - name: Restore workloads
+        script: |
+          $DOTNET workload restore MauiNet8.csproj
 
       # - name: Install Android Dependencies
       #   script: | 
