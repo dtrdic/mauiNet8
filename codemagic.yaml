@@ -105,21 +105,11 @@ workflows:
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
 
-      - name: Clean Android SDK packs
-        script: |
-          rm -rf $DOTNET_PATH/packs/Microsoft.Android.Sdk.Darwin
-          rm -rf ~/.nuget/packages/microsoft.android.sdk*
 
-      - name: Install MAUI
+      - name: Install MAUI workloads
         script: |
           $DOTNET nuget locals all --clear
-          $DOTNET workload install maui-android \
-            --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-            --source https://api.nuget.org/v3/index.json
-
-      - name: Restore workloads
-        script: |
-          $DOTNET workload restore MauiNet8.csproj
+          $DOTNET workload install maui-android
 
       - name: Build
         script: |
