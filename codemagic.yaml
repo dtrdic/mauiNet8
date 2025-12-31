@@ -105,16 +105,13 @@ workflows:
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
 
-      - name: Clean dotnet workloads
-        script: |
-          $DOTNET nuget locals all --clear
-          rm -rf $DOTNET_PATH/packs
-          rm -rf ~/.dotnet/packs
-          rm -rf ~/.dotnet/workloads
-
-      - name: Install MAUI Android workload
-        script: |
-          $DOTNET workload install maui-android --skip-manifest-update
+      # - name: Restore workloads
+      #   script: |
+      #     $DOTNET workload restore MauiNet8.csproj
+      # - name: Install MAUI workloads
+      #   script: |
+      #     $DOTNET nuget locals all --clear
+      #     $DOTNET workload install maui
 
       - name: Build
         script: |
@@ -129,7 +126,6 @@ workflows:
             -p:ApplicationVersion=$BUILD_NUMBER \
             -p:ApplicationDisplayVersion="1.0.0" \
             -o ../artifacts
-
 
     artifacts:
       - /Users/builder/clone/artifacts/*Signed.aab
