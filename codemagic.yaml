@@ -88,6 +88,7 @@ workflows:
     name: Maui Android
     max_build_duration: 120
     instance_type: mac_mini_m2
+
     environment:
       flutter: 3.27.4
       android_signing:
@@ -95,26 +96,32 @@ workflows:
       groups:
         - google_play
       vars:
+        DOTNET_ROOT: $CM_BUILD_DIR/dotnet
         DOTNET_PATH: $CM_BUILD_DIR/dotnet
         DOTNET: $CM_BUILD_DIR/dotnet/dotnet
         PACKAGE_NAME: "io.codemagic.mauinet8"
+
     scripts:
       - name: Install dotnet sdk
-        script: | 
+        script: |
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+          export PATH="$DOTNET_PATH:$PATH"
 
-      - name: Clean .net workloads
+      - name: HARD clean dotnet workloads
         script: |
           $DOTNET nuget locals all --clear
-          rm -rf $DOTNET_PATH/packs
           rm -rf ~/.dotnet/packs
           rm -rf ~/.dotnet/workloads
-      - name: Install MAUI workloads
+          rm -rf ~/.dotnet/sdk-manifests
+          rm -rf $DOTNET_PATH/packs
+
+      - name: Install MAUI Android ONLY
         script: |
-          $DOTNET nuget locals all --clear
-          $DOTNET workload install maui
+          $DOTNET workload install maui-android \
+            --skip-manifest-update \
+            --disable-parallel
 
       - name: Build
         script: |
@@ -132,9 +139,11 @@ workflows:
 
     artifacts:
       - /Users/builder/clone/artifacts/*Signed.aab
+
     publishing:
       google_play:
         credentials: $GOOGLE_PLAY_SERVICE_ACCOUNT_CREDENTIALS
         track: internal
         submit_as_draft: true
+
 
