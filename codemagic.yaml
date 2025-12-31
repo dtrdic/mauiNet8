@@ -105,13 +105,16 @@ workflows:
           chmod +x dotnet-install.sh
           ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
 
-      # - name: Restore workloads
-      #   script: |
-      #     $DOTNET workload restore MauiNet8.csproj
-      # - name: Install MAUI workloads
-      #   script: |
-      #     $DOTNET nuget locals all --clear
-      #     $DOTNET workload install maui
+      - name: Clean .net workloads
+        script: |
+          $DOTNET nuget locals all --clear
+          rm -rf $DOTNET_PATH/packs
+          rm -rf ~/.dotnet/packs
+          rm -rf ~/.dotnet/workloads
+      - name: Install MAUI workloads
+        script: |
+          $DOTNET nuget locals all --clear
+          $DOTNET workload install maui
 
       - name: Build
         script: |
