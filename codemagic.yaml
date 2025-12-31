@@ -121,7 +121,7 @@ workflows:
 
       - name: Install MAUI Android ONLY
         script: |
-          dotnet workload install maui-android \
+          $DOTNET workload install maui-android \
             --from-rollback-file android-workload.json \
             --disable-parallel
 
