@@ -125,11 +125,11 @@ workflows:
           rm -rf ~/.dotnet/sdk-manifests
           rm -rf $DOTNET_PATH/packs
 
-      - name: Install MAUI Android ONLY
-        script: |
-          $DOTNET workload install maui-android \
-            --from-rollback-file android-workload.json \
-            --disable-parallel
+      # - name: Install MAUI Android ONLY
+      #   script: |
+      #     $DOTNET workload install maui-android \
+      #       --from-rollback-file android-workload.json \
+      #       --disable-parallel
 
 
       - name: Build
