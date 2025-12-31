@@ -103,6 +103,15 @@ workflows:
         PACKAGE_NAME: "io.codemagic.mauinet8"
 
     scripts:
+      - name: HARD clean dotnet workloads
+        script: |
+          $DOTNET nuget locals all --clear
+          # rm -rf ~/.dotnet/packs
+          # rm -rf ~/.dotnet/workloads
+          # rm -rf ~/.dotnet/sdk-manifests
+          # rm -rf $DOTNET_PATH/packs
+          rm -rf ~/.dotnet
+          rm -rf $DOTNET_PATH
       - name: Install dotnet sdk
         script: |
           wget https://dot.net/v1/dotnet-install.sh
@@ -114,17 +123,6 @@ workflows:
 
           which dotnet
           dotnet --info
-
-
-      - name: HARD clean dotnet workloads
-        script: |
-          $DOTNET nuget locals all --clear
-          # rm -rf ~/.dotnet/packs
-          # rm -rf ~/.dotnet/workloads
-          # rm -rf ~/.dotnet/sdk-manifests
-          # rm -rf $DOTNET_PATH/packs
-          rm -rf ~/.dotnet
-          rm -rf $DOTNET_PATH
 
       - name: Restore workloads
         script: |
