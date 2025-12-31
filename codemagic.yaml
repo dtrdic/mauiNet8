@@ -23,6 +23,8 @@ workflows:
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
             ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+            export PATH="$DOTNET_PATH:$PATH"
+
         - name: Install MAUI workload
           script: | 
             $DOTNET nuget locals all --clear 
