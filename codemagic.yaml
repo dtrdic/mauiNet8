@@ -109,7 +109,7 @@ workflows:
       - name: Install MAUI workloads
         script: |
           $DOTNET nuget locals all --clear
-          $DOTNET workload install maui-android
+          $DOTNET workload install maui
 
       - name: Build
         script: |
