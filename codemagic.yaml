@@ -25,12 +25,17 @@ workflows:
             ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
           #  export PATH="$DOTNET_PATH:$PATH"
 
-        - name: Install MAUI workload
-          script: | 
-            $DOTNET nuget locals all --clear 
-            $DOTNET workload install ios maui \
-              --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
-              --source https://api.nuget.org/v3/index.json   
+        - name: Install MAUI iOS workload only
+          script: |
+            $DOTNET nuget locals all --clear
+            $DOTNET workload install maui-ios ios
+
+        # - name: Install MAUI workload
+        #   script: | 
+        #     $DOTNET nuget locals all --clear 
+        #     $DOTNET workload install ios maui \
+        #       --source https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet8/nuget/v3/index.json \
+        #       --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
