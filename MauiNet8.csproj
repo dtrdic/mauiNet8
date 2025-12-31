@@ -41,7 +41,7 @@
 	<PropertyGroup Condition="'$(CI)' == 'true'">
 	<TargetFrameworks>net8.0-ios</TargetFrameworks>
 	<UseAndroid>false</UseAndroid>
-	
+
 </PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
@@ -61,10 +61,11 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<!-- <ItemGroup>
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.3" />
-		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.3" />
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
+		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
-	</ItemGroup> -->
+	</ItemGroup>
+
 
 </Project>
