@@ -125,6 +125,11 @@ workflows:
           rm -rf ~/.dotnet/sdk-manifests
           rm -rf $DOTNET_PATH/packs
 
+      - name: Restore workloads
+        script: |
+          $DOTNET workload restore MauiNet8.csproj \
+            --disable-parallel
+
       # - name: Install MAUI Android ONLY
       #   script: |
       #     $DOTNET workload install maui-android \
