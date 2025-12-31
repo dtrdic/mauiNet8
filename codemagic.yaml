@@ -108,7 +108,7 @@ workflows:
         script: |
           wget https://dot.net/v1/dotnet-install.sh
           chmod +x dotnet-install.sh
-          ./dotnet-install.sh --channel 8.0 --install-dir $DOTNET_PATH
+          ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_PATH
           export PATH="$DOTNET_PATH:$PATH"
 
       - name: HARD clean dotnet workloads
