@@ -1,31 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <!-- Default: multi-target for local dev -->
+  <PropertyGroup Condition="'$(TargetFramework)' == ''">
+    <TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+  </PropertyGroup>
+
+  <!-- CI / explicit -f build: ONLY build what was requested -->
+  <PropertyGroup Condition="'$(TargetFramework)' != ''">
+    <TargetFramework>$(TargetFramework)</TargetFramework>
+  </PropertyGroup>
+
   <PropertyGroup>
-    <!-- CI-safe target -->
-    <TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
-
     <OutputType>Exe</OutputType>
-    <RootNamespace>MauiNet8</RootNamespace>
-
-    <!-- MAUI -->
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
-
-    <!-- .NET -->
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
-    <!-- FORCE MAUI SDK VERSION (CRITICAL) -->
-    <MauiVersion>8.0.416</MauiVersion>
-    <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
-
-    <!-- App metadata -->
     <ApplicationTitle>MauiNet8</ApplicationTitle>
     <ApplicationId>io.codemagic.mauinet8</ApplicationId>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationDisplayVersion>1.0.0</ApplicationDisplayVersion>
     <ApplicationVersion>1</ApplicationVersion>
 
-    <!-- Platform minimums -->
     <SupportedOSPlatformVersion
       Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
       21.0
@@ -33,43 +29,8 @@
 
     <SupportedOSPlatformVersion
       Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">
-      11.0
-    </SupportedOSPlatformVersion>
-
-    <SupportedOSPlatformVersion
-      Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">
-      13.1
+      13.0
     </SupportedOSPlatformVersion>
   </PropertyGroup>
 
-  <!-- CI: build ANDROID ONLY -->
-  <PropertyGroup Condition="'$(CI)' == 'true'">
-    <TargetFramework>net8.0-android</TargetFramework>
-    <UseIOS>false</UseIOS>
-    <UseMacCatalyst>false</UseMacCatalyst>
-  </PropertyGroup>
-
-  <!-- Assets -->
-  <ItemGroup>
-    <MauiIcon Include="Resources\AppIcon\appicon.svg"
-              ForegroundFile="Resources\AppIcon\appiconfg.svg"
-              Color="#512BD4" />
-
-    <MauiSplashScreen Include="Resources\Splash\splash.svg"
-                      Color="#512BD4"
-                      BaseSize="128,128" />
-
-    <MauiImage Include="Resources\Images\*" />
-    <MauiImage Update="Resources\Images\dotnet_bot.png"
-               Resize="True"
-               BaseSize="300,185" />
-
-    <MauiFont Include="Resources\Fonts\*" />
-
-    <MauiAsset Include="Resources\Raw\**"
-               LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
-  </ItemGroup>
-
-  <!-- DO NOT add Microsoft.Maui.Controls packages -->
-  <!-- MAUI workloads provide these -->
 </Project>
