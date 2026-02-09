@@ -22,8 +22,8 @@ workflows:
           script: | 
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --install-dir $DOTNET_PATH --version 8.0.407
-            #./dotnet-install.sh --install-dir $DOTNET_PATH --version 9.0.202
+            #./dotnet-install.sh --install-dir $DOTNET_PATH --version 8.0.407
+            ./dotnet-install.sh --install-dir $DOTNET_PATH --version 9.0.202
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
