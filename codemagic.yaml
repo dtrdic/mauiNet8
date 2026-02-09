@@ -27,7 +27,7 @@ workflows:
         - name: Install MAUI
           script: | 
             $DOTNET nuget locals all --clear 
-            $DOTNET workload install ios maui --source https://aka.ms/dotnet8/nuget/index.json --source https://api.nuget.org/v3/index.json
+            $DOTNET workload install ios maui --source https://aka.ms/dotnet9/nuget/index.json --source https://api.nuget.org/v3/index.json
         - name: Set Info.plist values
           script: | 
             # Automatically fill out the encryption compliance setting
