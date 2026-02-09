@@ -27,7 +27,7 @@ workflows:
           script: | 
             $DOTNET nuget locals all --clear 
             $DOTNET workload install ios maui \
-              --source https://aka.ms/dotnet6/nuget/index.json \
+              --source https://aka.ms/dotnet9/nuget/index.json \
               --source https://api.nuget.org/v3/index.json   
         - name: Set Info.plist values
           script: | 
