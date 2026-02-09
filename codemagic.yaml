@@ -22,7 +22,7 @@ workflows:
           script: |
             wget https://dot.net/v1/dotnet-install.sh
             chmod +x dotnet-install.sh
-            ./dotnet-install.sh --channel 9.0.202 --install-dir $DOTNET_PATH
+            ./dotnet-install.sh --channel 9.0 --install-dir $DOTNET_PATH
 
         - name: Install MAUI iOS workload only
           script: |
